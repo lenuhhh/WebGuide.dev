@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebGuide.dev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/devops.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/devops.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -81,9 +80,24 @@
     </ul>
   </div>
   <div class="sb-group">
+    <div class="sb-title">🔌 Плагіни</div>
+    <ul class="sb-links">
+      <li><a href="#plugins-intro">▸ Що таке плагін</a></li>
+      <li><a href="#plugins-ui">▸ UI / Компоненти</a></li>
+      <li><a href="#plugins-animation">▸ Анімація</a></li>
+      <li><a href="#plugins-charts">▸ Графіки і дані</a></li>
+      <li><a href="#plugins-forms">▸ Форми і валідація</a></li>
+      <li><a href="#plugins-media">▸ Медіа і слайдери</a></li>
+      <li><a href="#plugins-utils">▸ Утиліти</a></li>
+      <li><a href="#plugins-table">▸ Таблиця порівняння</a></li>
+      <li><a href="#plugins-howto">▸ Як підключити</a></li>
+    </ul>
+  </div>
+  <div class="sb-group">
     <div class="sb-title">⭐ Довідники</div>
     <ul class="sb-links">
       <li><a href="#design-system">Дизайн-система</a></li>
+      <li><a href="#tips">Кращі практики</a></li>
     </ul>
   </div>
 </aside>
@@ -94,7 +108,7 @@
 <!-- PAGE HERO -->
 <section class="page-hero" id="intro">
   <h1>Повний гайд по розробці сайту</h1>
-  <p class="subtitle">Весь оригінальний код сайту — по блоках: HTML розмітка + CSS стилі до кожного блоку + JS.</p>
+  <p class="subtitle">Оригінальний код сайту — по блоках: HTML розмітка + CSS стилі до кожного блоку + JS.</p>
   <div class="badge-row">
     <span class="badge html">HTML5</span>
     <span class="badge css">CSS3</span>
@@ -1566,14 +1580,437 @@
   </div>
 </section>
 
+<!-- TIPS -->
+<section class="doc-section" id="tips">
+  <h2>💡 Кращі практики</h2>
+  <ul class="step-list">
+    <li><span class="num">01</span><div><strong>Один &lt;h1&gt; на сторінці</strong> — правило SEO. Всі інші: h2, h3 за ієрархією вниз.</div></li>
+    <li><span class="num">02</span><div><strong>box-sizing: border-box</strong> на <code>*</code> — перший рядок будь-якого CSS файлу. Padding входить у ширину.</div></li>
+    <li><span class="num">03</span><div><strong>position: sticky + z-index</strong> для header — щоб навігація залишалась видимою при прокручуванні.</div></li>
+    <li><span class="num">04</span><div><strong>transition: all 0.3s</strong> на hover-елементах — різка зміна без transition виглядає дешево.</div></li>
+    <li><span class="num">05</span><div><strong>max-width + margin: 0 auto</strong> — стандарт центрування контенту. Використовується в кожній секції.</div></li>
+    <li><span class="num">06</span><div><strong>id на секціях</strong> — <code>id="section1"</code> дозволяє навігації з href="#section1" скролити до потрібного місця.</div></li>
+    <li><span class="num">07</span><div><strong>flex-shrink: 0 на іконках</strong> — щоб іконка не стискалась коли тексту стає більше.</div></li>
+    <li><span class="num">08</span><div><strong>JS перед &lt;/body&gt;</strong> — скрипти в кінці документа: HTML завантажується першим, потім JS знаходить елементи.</div></li>
+    <li><span class="num">09</span><div><strong>overflow: hidden на картках</strong> — щоб зображення всередині картки не виходило за межі border-radius.</div></li>
+    <li><span class="num">10</span><div><strong>cursor: pointer</strong> — на кожному клікабельному елементі. Без нього cursor стрілкою — заплутує користувача.</div></li>
+  </ul>
+
+  <div class="callout result">
+    <span class="icon">🎉</span>
+    <p><strong>Весь оригінальний код збережений.</strong> Кожен блок — HTML і CSS поруч. Навігація по боковому меню веде до конкретного блоку. Код не змінено — лише структуровано.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════
+     РОЗДІЛ: ПЛАГІНИ
+════════════════════════════════════════════════════════ -->
+
+<!-- INTRO -->
+<section class="doc-section" id="plugins-intro">
+  <h2>🔌 Плагіни для веб-розробки</h2>
+  <p class="section-intro">Плагін — готова бібліотека JavaScript (або CSS), яку підключаєш одним рядком і отримуєш складну функціональність без написання коду з нуля.</p>
+
+  <div class="callout info">
+    <span class="icon">💡</span>
+    <p><strong>Навіщо плагіни?</strong> Замість того щоб писати слайдер з нуля (300+ рядків), підключаєш Swiper.js — і він готовий за 5 хвилин. Плагіни — це колективний досвід тисяч розробників, упакований у зручний інструмент.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="ic-icon">📦</div>
+      <div class="ic-title">CDN підключення</div>
+      <p class="ic-desc">Одним тегом <code>&lt;script&gt;</code> або <code>&lt;link&gt;</code> — файл завантажується з серверів CDN автоматично.</p>
+    </div>
+    <div class="info-card">
+      <div class="ic-icon">⚡</div>
+      <div class="ic-title">npm / yarn</div>
+      <p class="ic-desc">Встановлюєш через термінал: <code>npm install swiper</code> — і імпортуєш у свій проєкт модулями.</p>
+    </div>
+    <div class="info-card">
+      <div class="ic-icon">🎯</div>
+      <div class="ic-title">Ініціалізація</div>
+      <p class="ic-desc">Після підключення — ініціалізуєш через JS: <code>new Swiper('.swiper', {...})</code> і налаштовуєш через options-об'єкт.</p>
+    </div>
+    <div class="info-card">
+      <div class="ic-icon">🔧</div>
+      <div class="ic-title">Документація</div>
+      <p class="ic-desc">Кожен плагін має офіційний сайт з прикладами, API і всіма опціями — завжди читай перед використанням.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UI / КОМПОНЕНТИ -->
+<section class="doc-section" id="plugins-ui">
+  <h2><span class="step-number">UI</span> Компоненти інтерфейсу</h2>
+  <p class="section-intro">Готові UI-елементи: модальні вікна, дропдауни, тултіпи, акордеони. Замінюють необхідність писати складну логіку самостійно.</p>
+
+  <h3>🏆 Bootstrap 5</h3>
+  <p>Найпопулярніший CSS-фреймворк у світі. Дає готову сітку (grid), кнопки, картки, модалки, навбар, форми, іконки — все через CSS-класи. Не потрібно писати майже жодного CSS.</p>
+  <div class="callout tip">
+    <span class="icon">✅</span>
+    <p><strong>Коли використовувати:</strong> Швидкий прототип, адмін-панелі, корпоративні сайти де дизайн не критичний. Мінус — сайти схожі один на одного.</p>
+  </div>
+  <div class="block-label">CDN підключення</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">&lt;!-- CSS у &lt;head&gt; --&gt;</span>
+<span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span><span class="t-tag">&gt;</span>
+
+<span class="t-comm">&lt;!-- JS перед &lt;/body&gt; --&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>💎 Tippy.js — тултіпи і попапи</h3>
+  <p>Красиві, кастомізовані тултіпи (підказки при наведенні) і popover-вікна. Підтримує HTML всередині, анімації, позиціонування. Лише 15KB.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://unpkg.com/@popperjs/core@2"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://unpkg.com/tippy.js@6"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+
+<span class="t-comm">&lt;!-- Використання --&gt;</span>
+<span class="t-tag">&lt;button</span> <span class="t-attr">data-tippy-content</span>=<span class="t-val">"Підказка тут"</span><span class="t-tag">&gt;</span>Наведи<span class="t-tag">&lt;/button&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-fn">tippy</span>(<span class="t-str">'[data-tippy-content]'</span>);
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🎭 SweetAlert2 — красиві alert-вікна</h3>
+  <p>Замінює стандартні браузерні <code>alert()</code>, <code>confirm()</code>, <code>prompt()</code> на красиві кастомні модальні вікна з анімацією, іконками і кнопками.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">// Підключення</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/sweetalert2@11"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+
+<span class="t-comm">// Використання</span>
+<span class="t-fn">Swal</span>.<span class="t-fn">fire</span>({
+  <span class="t-prop">title</span>: <span class="t-str">'Успішно!'</span>,
+  <span class="t-prop">text</span>: <span class="t-str">'Форму відправлено'</span>,
+  <span class="t-prop">icon</span>: <span class="t-str">'success'</span>  <span class="t-comm">// success / error / warning / info</span>
+});</code></pre>
+  </div>
+</section>
+
+<!-- АНІМАЦІЯ -->
+<section class="doc-section" id="plugins-animation">
+  <h2><span class="step-number">✨</span> Анімація і ефекти</h2>
+  <p class="section-intro">Плагіни для плавних переходів, появи елементів при скролі, паралакс-ефектів і складних CSS-анімацій.</p>
+
+  <h3>🌊 AOS — Animate On Scroll</h3>
+  <p>Елементи анімовано з'являються при прокрутці сторінки. Додаєш атрибут <code>data-aos="fade-up"</code> і елемент плавно виїжджає знизу коли потрапляє у viewport. Нульовий JS-код з вашого боку.</p>
+  <div class="callout tip">
+    <span class="icon">🎯</span>
+    <p><strong>Ефекти:</strong> <code>fade-up</code>, <code>fade-left</code>, <code>zoom-in</code>, <code>flip-left</code>, <code>slide-right</code> та ще 20+ варіантів. Налаштовується затримка (<code>data-aos-delay</code>) і тривалість.</p>
+  </div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;link</span> <span class="t-attr">href</span>=<span class="t-val">"https://unpkg.com/aos@2.3.1/dist/aos.css"</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://unpkg.com/aos@2.3.1/dist/aos.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+
+<span class="t-comm">&lt;!-- На елементах --&gt;</span>
+<span class="t-tag">&lt;div</span> <span class="t-attr">data-aos</span>=<span class="t-val">"fade-up"</span> <span class="t-attr">data-aos-delay</span>=<span class="t-val">"200"</span><span class="t-tag">&gt;</span>Контент<span class="t-tag">&lt;/div&gt;</span>
+
+<span class="t-tag">&lt;script&gt;</span>
+  AOS.<span class="t-fn">init</span>({ <span class="t-prop">duration</span>: <span class="t-num">800</span>, <span class="t-prop">once</span>: <span class="t-kw">true</span> });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🎬 GSAP — GreenSock Animation Platform</h3>
+  <p>Найпотужніша бібліотека анімацій у JS. Анімує будь-яку CSS-властивість, SVG, canvas, scroll-based анімації. Використовується на сайтах Apple, Google, NASA. Складніша у вивченні, але дає необмежені можливості.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+
+<span class="t-comm">// Анімація елемента</span>
+gsap.<span class="t-fn">to</span>(<span class="t-str">'.box'</span>, { <span class="t-prop">x</span>: <span class="t-num">200</span>, <span class="t-prop">rotation</span>: <span class="t-num">360</span>, <span class="t-prop">duration</span>: <span class="t-num">1</span> });
+
+<span class="t-comm">// Послідовна анімація (timeline)</span>
+<span class="t-kw">const</span> <span class="t-var">tl</span> = gsap.<span class="t-fn">timeline</span>();
+tl.<span class="t-fn">from</span>(<span class="t-str">'h1'</span>, { <span class="t-prop">opacity</span>: <span class="t-num">0</span>, <span class="t-prop">y</span>: -<span class="t-num">50</span>, <span class="t-prop">duration</span>: <span class="t-num">0.8</span> })
+  .<span class="t-fn">from</span>(<span class="t-str">'p'</span>,  { <span class="t-prop">opacity</span>: <span class="t-num">0</span>, <span class="t-prop">y</span>:  <span class="t-num">30</span>, <span class="t-prop">duration</span>: <span class="t-num">0.6</span> });</code></pre>
+  </div>
+
+  <h3>✨ Particles.js — частинки на фоні</h3>
+  <p>Генерує інтерактивний фон з рухомих частинок, з'єднаних лініями. Частинки реагують на рух миші. Популярний ефект для hero-секцій і лендингів.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;div</span> <span class="t-attr">id</span>=<span class="t-val">"particles-js"</span><span class="t-tag">&gt;&lt;/div&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-fn">particlesJS</span>(<span class="t-str">'particles-js'</span>, {
+    <span class="t-prop">particles</span>: { <span class="t-prop">number</span>: { <span class="t-prop">value</span>: <span class="t-num">80</span> }, <span class="t-prop">color</span>: { <span class="t-prop">value</span>: <span class="t-str">'#292e1e'</span> },
+      <span class="t-prop">links</span>: { <span class="t-prop">enable</span>: <span class="t-kw">true</span> }, <span class="t-prop">move</span>: { <span class="t-prop">enable</span>: <span class="t-kw">true</span> } }
+  });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+</section>
+
+<!-- ГРАФІКИ -->
+<section class="doc-section" id="plugins-charts">
+  <h2><span class="step-number">📊</span> Графіки і візуалізація даних</h2>
+  <p class="section-intro">Бібліотеки для побудови інтерактивних графіків, діаграм, карт і дашбордів прямо в браузері.</p>
+
+  <h3>📈 Chart.js — прості і красиві графіки</h3>
+  <p>Найпростіша бібліотека для графіків. Підтримує: лінійні, стовпчасті, кругові, радарні, полярні діаграми. Інтерактивні (hover показує значення). Ідеальна для початківців — мінімум коду.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;canvas</span> <span class="t-attr">id</span>=<span class="t-val">"myChart"</span><span class="t-tag">&gt;&lt;/canvas&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/chart.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-kw">new</span> <span class="t-fn">Chart</span>(<span class="t-fn">document</span>.<span class="t-fn">getElementById</span>(<span class="t-str">'myChart'</span>), {
+    <span class="t-prop">type</span>: <span class="t-str">'bar'</span>,  <span class="t-comm">// 'line' | 'pie' | 'doughnut' | 'radar'</span>
+    <span class="t-prop">data</span>: {
+      <span class="t-prop">labels</span>: [<span class="t-str">'Пн'</span>, <span class="t-str">'Вт'</span>, <span class="t-str">'Ср'</span>, <span class="t-str">'Чт'</span>, <span class="t-str">'Пт'</span>],
+      <span class="t-prop">datasets</span>: [{ <span class="t-prop">label</span>: <span class="t-str">'Відвідувачі'</span>, <span class="t-prop">data</span>: [<span class="t-num">120</span>, <span class="t-num">190</span>, <span class="t-num">80</span>, <span class="t-num">210</span>, <span class="t-num">150</span>] }]
+    }
+  });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🔥 D3.js — повна свобода візуалізації</h3>
+  <p>Найпотужніша бібліотека даних. Прив'язує довільні дані до DOM і маніпулює ними. Можна зробити будь-яку візуалізацію: дерева, карти, теплові карти, мережеві графи. Складна у вивченні, але безмежна.</p>
+  <div class="callout warn">
+    <span class="icon">⚠️</span>
+    <p><strong>Складність:</strong> D3.js вимагає розуміння SVG і математики. Для простих графіків краще Chart.js. D3 — для складних і нестандартних візуалізацій.</p>
+  </div>
+
+  <h3>📊 ApexCharts — сучасні інтерактивні графіки</h3>
+  <p>Золота середина між Chart.js і D3. Красиві SVG-графіки, вбудовані анімації, zoom/pan, реальний час (realtime charts). Відмінно виглядає в дашбордах.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;div</span> <span class="t-attr">id</span>=<span class="t-val">"chart"</span><span class="t-tag">&gt;&lt;/div&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/apexcharts"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-kw">new</span> <span class="t-fn">ApexCharts</span>(<span class="t-fn">document</span>.<span class="t-fn">querySelector</span>(<span class="t-str">'#chart'</span>), {
+    <span class="t-prop">chart</span>: { <span class="t-prop">type</span>: <span class="t-str">'area'</span> },
+    <span class="t-prop">series</span>: [{ <span class="t-prop">name</span>: <span class="t-str">'Продажі'</span>, <span class="t-prop">data</span>: [<span class="t-num">30</span>, <span class="t-num">40</span>, <span class="t-num">35</span>, <span class="t-num">50</span>, <span class="t-num">49</span>] }],
+    <span class="t-prop">xaxis</span>: { <span class="t-prop">categories</span>: [<span class="t-str">'Січ'</span>, <span class="t-str">'Лют'</span>, <span class="t-str">'Бер'</span>, <span class="t-str">'Квіт'</span>, <span class="t-str">'Трав'</span>] }
+  }).<span class="t-fn">render</span>();
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+</section>
+
+<!-- ФОРМИ -->
+<section class="doc-section" id="plugins-forms">
+  <h2><span class="step-number">📝</span> Форми і валідація</h2>
+  <p class="section-intro">Плагіни що покращують роботу з формами: валідація полів, маски введення, красиві select-меню, завантаження файлів.</p>
+
+  <h3>✅ Validator.js — валідація форм</h3>
+  <p>Перевіряє правильність введених даних: email, URL, номер телефону, кредитна картка, дати. Більше 60 готових валідаторів. Не залежить від jQuery.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdnjs.cloudflare.com/ajax/libs/validator/13.11.0/validator.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  validator.<span class="t-fn">isEmail</span>(<span class="t-str">'test@gmail.com'</span>);  <span class="t-comm">// → true</span>
+  validator.<span class="t-fn">isURL</span>(<span class="t-str">'https://site.com'</span>); <span class="t-comm">// → true</span>
+  validator.<span class="t-fn">isEmpty</span>(<span class="t-str">''</span>);              <span class="t-comm">// → true</span>
+  validator.<span class="t-fn">isLength</span>(<span class="t-str">'hello'</span>, {<span class="t-prop">min</span>:<span class="t-num">3</span>, <span class="t-prop">max</span>:<span class="t-num">10</span>}); <span class="t-comm">// → true</span>
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🎭 Choices.js — красиві select і multi-select</h3>
+  <p>Перетворює стандартний <code>&lt;select&gt;</code> на красивий дропдаун з пошуком, множинним вибором, кастомними стилями і додаванням нових опцій.</p>
+
+  <h3>📅 Flatpickr — datepicker</h3>
+  <p>Легкий (16KB) вибір дати/часу. Не залежить від jQuery на відміну від старого DatePicker. Підтримує діапазони дат, вбудований timepicker, локалізацію.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/flatpickr"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+
+<span class="t-tag">&lt;input</span> <span class="t-attr">id</span>=<span class="t-val">"datepicker"</span> <span class="t-attr">type</span>=<span class="t-val">"text"</span> <span class="t-attr">placeholder</span>=<span class="t-val">"Оберіть дату"</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-fn">flatpickr</span>(<span class="t-str">'#datepicker'</span>, {
+    <span class="t-prop">mode</span>: <span class="t-str">'range'</span>, <span class="t-prop">dateFormat</span>: <span class="t-str">'d.m.Y'</span>, <span class="t-prop">locale</span>: <span class="t-str">'uk'</span>
+  });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+</section>
+
+<!-- МЕДІА -->
+<section class="doc-section" id="plugins-media">
+  <h2><span class="step-number">🖼️</span> Медіа, слайдери і галереї</h2>
+  <p class="section-intro">Слайдери зображень, лайтбокси (перегляд фото на весь екран), відеоплеєри і галереї з drag-підтримкою.</p>
+
+  <h3>🌀 Swiper.js — сучасний слайдер</h3>
+  <p>Найкращий touch-слайдер. Підтримує свайпи на мобільному, автопрокрутку, фейд, cube, coverflow ефекти, пагінацію, стрілки. Використовується на мільйонах сайтів.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"</span><span class="t-tag">&gt;</span>
+
+<span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"swiper"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"swiper-wrapper"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"swiper-slide"</span><span class="t-tag">&gt;</span>Слайд 1<span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"swiper-slide"</span><span class="t-tag">&gt;</span>Слайд 2<span class="t-tag">&lt;/div&gt;</span>
+  <span class="t-tag">&lt;/div&gt;</span>
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"swiper-pagination"</span><span class="t-tag">&gt;&lt;/div&gt;</span>
+<span class="t-tag">&lt;/div&gt;</span>
+
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-kw">new</span> <span class="t-fn">Swiper</span>(<span class="t-str">'.swiper'</span>, {
+    <span class="t-prop">loop</span>: <span class="t-kw">true</span>, <span class="t-prop">autoplay</span>: { <span class="t-prop">delay</span>: <span class="t-num">3000</span> },
+    <span class="t-prop">pagination</span>: { <span class="t-prop">el</span>: <span class="t-str">'.swiper-pagination'</span> }
+  });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🔍 GLightbox — лайтбокс для зображень</h3>
+  <p>Відкриває зображення, відео (YouTube, Vimeo), iframe в красивому повноекранному оверлеї. Свайп на мобільному, клавіатурна навігація, галерея з thumbnail.</p>
+
+  <h3>🖼️ Masonry — сітка Pinterest-стиль</h3>
+  <p>Розставляє елементи різної висоти в каскадну сітку без пробілів — як картки в Pinterest. Автоматично перераховує позиції при зміні розміру вікна.</p>
+</section>
+
+<!-- УТИЛІТИ -->
+<section class="doc-section" id="plugins-utils">
+  <h2><span class="step-number">⚙️</span> Утиліти і допоміжні бібліотеки</h2>
+  <p class="section-intro">Плагіни що не видно на сторінці, але значно спрощують розробку: робота з датами, числами, рядками, HTTP-запитами.</p>
+
+  <h3>📅 Day.js — робота з датами</h3>
+  <p>Легка (2KB) заміна Moment.js. Парсить, форматує, порівнює дати. Обчислює різницю між датами, додає/віднімає дні, тижні, місяці. Підтримує часові пояси.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-fn">dayjs</span>().<span class="t-fn">format</span>(<span class="t-str">'DD.MM.YYYY'</span>);        <span class="t-comm">// → '15.03.2026'</span>
+  <span class="t-fn">dayjs</span>().<span class="t-fn">add</span>(<span class="t-num">7</span>, <span class="t-str">'day'</span>).<span class="t-fn">fromNow</span>();    <span class="t-comm">// → 'за 7 днів'</span>
+  <span class="t-fn">dayjs</span>(<span class="t-str">'2025-01-01'</span>).<span class="t-fn">diff</span>(<span class="t-fn">dayjs</span>(), <span class="t-str">'month'</span>); <span class="t-comm">// → кількість місяців</span>
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🌐 Axios — HTTP-запити</h3>
+  <p>Зручна бібліотека для GET/POST запитів до API. Автоматично парсить JSON, підтримує interceptors (перехоплення запитів), скасування, прогрес завантаження. Простіша за fetch.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-comm">// GET-запит</span>
+  axios.<span class="t-fn">get</span>(<span class="t-str">'https://api.example.com/users'</span>)
+    .<span class="t-fn">then</span>(<span class="t-var">res</span> => console.<span class="t-fn">log</span>(<span class="t-var">res</span>.<span class="t-prop">data</span>));
+
+  <span class="t-comm">// POST-запит</span>
+  axios.<span class="t-fn">post</span>(<span class="t-str">'/api/form'</span>, { <span class="t-prop">name</span>: <span class="t-str">'Іван'</span>, <span class="t-prop">email</span>: <span class="t-str">'ivan@mail.com'</span> });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🔔 Notyf — легкі toast-сповіщення</h3>
+  <p>Маленькі pop-up повідомлення в куті екрана (success/error/warning). Ідеальні для підтвердження дій користувача. Лише 3KB, без залежностей.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;script&gt;</span>
+  <span class="t-kw">const</span> <span class="t-var">notyf</span> = <span class="t-kw">new</span> <span class="t-fn">Notyf</span>();
+  notyf.<span class="t-fn">success</span>(<span class="t-str">'Форму відправлено!'</span>);
+  notyf.<span class="t-fn">error</span>(<span class="t-str">'Щось пішло не так'</span>);
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <h3>🔢 CountUp.js — анімація чисел</h3>
+  <p>Анімує числа що рахуються від 0 до цільового значення. Ідеально для статистики на сторінці: "1,500+ клієнтів", "99% задоволених".</p>
+</section>
+
+<!-- ТАБЛИЦЯ ПОРІВНЯННЯ -->
+<section class="doc-section" id="plugins-table">
+  <h2>📋 Таблиця всіх плагінів</h2>
+  <p class="section-intro">Повна порівняльна таблиця — категорія, розмір, складність і для чого підходить кожен плагін.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Плагін</th>
+          <th>Категорія</th>
+          <th>Розмір</th>
+          <th>Складність</th>
+          <th>Для чого</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Bootstrap 5</td><td>UI Framework</td><td>~30KB</td><td>⭐ Легко</td><td>Вся верстка, grid, компоненти</td></tr>
+        <tr><td>Tippy.js</td><td>UI / Тултіпи</td><td>~15KB</td><td>⭐ Легко</td><td>Підказки при наведенні, popover</td></tr>
+        <tr><td>SweetAlert2</td><td>UI / Модалки</td><td>~45KB</td><td>⭐ Легко</td><td>Красиві alert, confirm, prompt</td></tr>
+        <tr><td>AOS</td><td>Анімація</td><td>~14KB</td><td>⭐ Легко</td><td>Поява елементів при скролі</td></tr>
+        <tr><td>GSAP</td><td>Анімація</td><td>~60KB</td><td>⭐⭐⭐ Складно</td><td>Будь-яка складна анімація</td></tr>
+        <tr><td>Particles.js</td><td>Анімація / Фон</td><td>~28KB</td><td>⭐⭐ Середньо</td><td>Інтерактивний фон з частинок</td></tr>
+        <tr><td>Chart.js</td><td>Графіки</td><td>~60KB</td><td>⭐ Легко</td><td>Стовпчасті, лінійні, кругові діаграми</td></tr>
+        <tr><td>ApexCharts</td><td>Графіки</td><td>~380KB</td><td>⭐⭐ Середньо</td><td>Сучасні SVG-графіки, дашборди</td></tr>
+        <tr><td>D3.js</td><td>Візуалізація</td><td>~250KB</td><td>⭐⭐⭐ Складно</td><td>Будь-яка нестандартна візуалізація</td></tr>
+        <tr><td>Validator.js</td><td>Форми</td><td>~28KB</td><td>⭐ Легко</td><td>Валідація email, URL, телефону</td></tr>
+        <tr><td>Flatpickr</td><td>Форми / Дата</td><td>~16KB</td><td>⭐ Легко</td><td>Вибір дати і часу, діапазони</td></tr>
+        <tr><td>Choices.js</td><td>Форми / Select</td><td>~50KB</td><td>⭐ Легко</td><td>Красиві select з пошуком</td></tr>
+        <tr><td>Swiper.js</td><td>Слайдер</td><td>~140KB</td><td>⭐⭐ Середньо</td><td>Touch-слайдер, карусель</td></tr>
+        <tr><td>GLightbox</td><td>Медіа</td><td>~20KB</td><td>⭐ Легко</td><td>Лайтбокс фото/відео</td></tr>
+        <tr><td>Masonry</td><td>Сітка</td><td>~14KB</td><td>⭐⭐ Середньо</td><td>Pinterest-сітка різних висот</td></tr>
+        <tr><td>Day.js</td><td>Утиліта</td><td>~2KB</td><td>⭐ Легко</td><td>Робота з датами і часом</td></tr>
+        <tr><td>Axios</td><td>HTTP</td><td>~13KB</td><td>⭐ Легко</td><td>GET/POST запити до API</td></tr>
+        <tr><td>Notyf</td><td>Сповіщення</td><td>~3KB</td><td>⭐ Легко</td><td>Toast-сповіщення success/error</td></tr>
+        <tr><td>CountUp.js</td><td>Анімація</td><td>~5KB</td><td>⭐ Легко</td><td>Анімовані числові лічильники</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ЯК ПІДКЛЮЧИТИ -->
+<section class="doc-section" id="plugins-howto">
+  <h2>🚀 Як правильно підключити плагін</h2>
+  <p class="section-intro">Три способи підключення — від найпростішого (CDN) до правильного для великих проєктів (npm).</p>
+
+  <h3>Спосіб 1 — CDN (для навчання і прототипів)</h3>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;head&gt;</span>
+  <span class="t-comm">&lt;!-- 1. CSS плагіна — у &lt;head&gt;, до своїх стилів --&gt;</span>
+  <span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/PLUGIN/dist/plugin.min.css"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-val">"styles.css"</span><span class="t-tag">&gt;</span>  <span class="t-comm">&lt;!-- свої стилі після --&gt;</span>
+<span class="t-tag">&lt;/head&gt;</span>
+<span class="t-tag">&lt;body&gt;</span>
+  <span class="t-comm">&lt;!-- ... контент ... --&gt;</span>
+
+  <span class="t-comm">&lt;!-- 2. JS плагіна — перед &lt;/body&gt; --&gt;</span>
+  <span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"https://cdn.jsdelivr.net/npm/PLUGIN/dist/plugin.min.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+  <span class="t-comm">&lt;!-- 3. Свій JS після плагіна --&gt;</span>
+  <span class="t-tag">&lt;script</span> <span class="t-attr">src</span>=<span class="t-val">"script.js"</span><span class="t-tag">&gt;&lt;/script&gt;</span>
+<span class="t-tag">&lt;/body&gt;</span></code></pre>
+  </div>
+
+  <h3>Спосіб 2 — npm (для реальних проєктів)</h3>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm"># Встановлення через термінал</span>
+npm install swiper chart.js dayjs axios
+
+<span class="t-comm"># Імпорт у JavaScript файлі</span>
+<span class="t-kw">import</span> Swiper <span class="t-kw">from</span> <span class="t-str">'swiper'</span>;
+<span class="t-kw">import</span> { Chart } <span class="t-kw">from</span> <span class="t-str">'chart.js'</span>;
+<span class="t-kw">import</span> dayjs <span class="t-kw">from</span> <span class="t-str">'dayjs'</span>;
+<span class="t-kw">import</span> axios <span class="t-kw">from</span> <span class="t-str">'axios'</span>;</code></pre>
+  </div>
+
+  <div class="callout result">
+    <span class="icon">🌿</span>
+    <p><strong>Золоте правило:</strong> Не підключай плагіни про всяк випадок. Кожен плагін = зайві кілобайти які завантажує користувач. Підключай тільки те, що реально використовується на сторінці.</p>
+  </div>
+
+  <ul class="step-list">
+    <li><span class="num">01</span><div><strong>Перевір розмір</strong> — для мобільних сайтів критично. Загальний JS не повинен перевищувати 200-300KB.</div></li>
+    <li><span class="num">02</span><div><strong>CSS завжди перед JS</strong> — підключай CSS плагіна в <code>&lt;head&gt;</code>, JS перед <code>&lt;/body&gt;</code>.</div></li>
+    <li><span class="num">03</span><div><strong>Свій код після плагіна</strong> — <code>script.js</code> завжди після всіх плагінів, інакше <code>new Swiper()</code> викине помилку.</div></li>
+    <li><span class="num">04</span><div><strong>Читай офіційну документацію</strong> — кожен плагін має сайт з прикладами. Не копіюй з випадкових статей.</div></li>
+    <li><span class="num">05</span><div><strong>Перевіряй npm trends</strong> — npmtrends.com показує популярність бібліотек. Популярна = підтримується і безпечна.</div></li>
+  </ul>
+</section>
 
 </main>
 </div>
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <span class="footer-logo">🌐 DevOpsDeveloper</span>
-    <span>HTML · CSS · JavaScript · 9 блоків</span>
+    <span class="footer-logo">WebGuide.dev</span>
+    <span>HTML · CSS · JavaScript · Плагіни · 9 блоків</span>
     <span>© 2026</span>
   </div>
 </footer>
