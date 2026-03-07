@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGuide.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/devops.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     SITE HEADER
+════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-logo"><span>WebGuide</span>.dev</div>
+  <nav class="header-nav">
+    <a href="#block-header">Header</a>
+    <a href="#block-hero">Hero</a>
+    <a href="#block-features">Features</a>
+    <a href="#block-content">Content</a>
+    <a href="#block-twocol">2-Col</a>
+    <a href="#block-cards">Cards</a>
+    <a href="#block-cta">CTA</a>
+    <a href="#block-faq">FAQ</a>
+    <a href="#block-footer">Footer</a>
+    <a href="#block-js">JS</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+<!-- ── SIDEBAR ────────────────────────────────────────── -->
+<aside class="sidebar">
+  <div class="sb-group">
+    <div class="sb-title">📌 Початок</div>
+    <ul class="sb-links">
+      <li><a href="#intro">Що будуємо</a></li>
+      <li><a href="#file-structure">Структура файлів</a></li>
+      <li><a href="#html-base">HTML скелет</a></li>
+    </ul>
+  </div>
+  <div class="sb-group">
+    <div class="sb-title">🏗️ Блоки HTML</div>
+    <ul class="sb-links">
+      <li><a href="#block-header">▸ Header / Навігація</a></li>
+      <li><a href="#block-hero">▸ Hero секція</a></li>
+      <li><a href="#block-features">▸ Features картки</a></li>
+      <li><a href="#block-content">▸ Content 2-Col</a></li>
+      <li><a href="#block-twocol">▸ Two-Column Items</a></li>
+      <li><a href="#block-cards">▸ Info Cards</a></li>
+      <li><a href="#block-cta">▸ CTA секція</a></li>
+      <li><a href="#block-faq">▸ FAQ секція</a></li>
+      <li><a href="#block-footer-html">▸ Footer</a></li>
+    </ul>
+  </div>
+  <div class="sb-group">
+    <div class="sb-title">🎨 CSS Блоки</div>
+    <ul class="sb-links">
+      <li><a href="#css-reset">Reset + body</a></li>
+      <li><a href="#css-header">Header CSS</a></li>
+      <li><a href="#css-hero">Hero CSS</a></li>
+      <li><a href="#css-buttons">Кнопки CSS</a></li>
+      <li><a href="#css-features">Features CSS</a></li>
+      <li><a href="#css-content">Content CSS</a></li>
+      <li><a href="#css-twocol">Two-Col CSS</a></li>
+      <li><a href="#css-cards">Cards CSS</a></li>
+      <li><a href="#css-cta">CTA CSS</a></li>
+      <li><a href="#css-faq">FAQ CSS</a></li>
+      <li><a href="#css-footer">Footer CSS</a></li>
+      <li><a href="#css-media">@media адаптив</a></li>
+    </ul>
+  </div>
+  <div class="sb-group">
+    <div class="sb-title">⚙️ JavaScript</div>
+    <ul class="sb-links">
+      <li><a href="#block-js">FAQ toggle</a></li>
+    </ul>
+  </div>
+  <div class="sb-group">
+    <div class="sb-title">⭐ Довідники</div>
+    <ul class="sb-links">
+      <li><a href="#design-system">Дизайн-система</a></li>
+    </ul>
+  </div>
+</aside>
+
+<!-- ── MAIN ───────────────────────────────────────────── -->
+<main class="main">
+
+<!-- PAGE HERO -->
+<section class="page-hero" id="intro">
+  <h1>Повний гайд по розробці сайту</h1>
+  <p class="subtitle">Весь оригінальний код сайту — по блоках: HTML розмітка + CSS стилі до кожного блоку + JS.</p>
+  <div class="badge-row">
+    <span class="badge html">HTML5</span>
+    <span class="badge css">CSS3</span>
+    <span class="badge js">JavaScript</span>
+    <span class="badge steps">9 блоків</span>
+  </div>
+</section>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-title">📑 Зміст — всі блоки сайту</div>
+  <ol>
+    <li><a href="#file-structure">Структура файлів проекту</a></li>
+    <li><a href="#html-base">HTML скелет — &lt;!DOCTYPE&gt;, &lt;head&gt;, &lt;body&gt;</a></li>
+    <li><a href="#block-header">Блок 1 — Header / Навігаційна панель</a></li>
+    <li><a href="#block-hero">Блок 2 — Hero секція (головний екран)</a></li>
+    <li><a href="#block-features">Блок 3 — Features (картки особливостей)</a></li>
+    <li><a href="#block-content">Блок 4 — Content Section (2 колонки з іконками)</a></li>
+    <li><a href="#block-twocol">Блок 5 — Two-Column Items (чергування)</a></li>
+    <li><a href="#block-cards">Блок 6 — Info Cards (картки з зображеннями)</a></li>
+    <li><a href="#block-cta">Блок 7 — CTA секція</a></li>
+    <li><a href="#block-faq">Блок 8 — FAQ секція</a></li>
+    <li><a href="#block-footer-html">Блок 9 — Footer / Підвал</a></li>
+    <li><a href="#block-js">JavaScript — FAQ toggle логіка</a></li>
+    <li><a href="#design-system">Дизайн-система: кольори, типографія, відступи</a></li>
+  </ol>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-steps">
+  <div class="ps-item done"><div class="ps-circle">1</div><div class="ps-label">Header</div></div>
+  <div class="ps-item done"><div class="ps-circle">2</div><div class="ps-label">Hero</div></div>
+  <div class="ps-item done"><div class="ps-circle">3</div><div class="ps-label">Features</div></div>
+  <div class="ps-item done"><div class="ps-circle">4</div><div class="ps-label">Content</div></div>
+  <div class="ps-item done"><div class="ps-circle">5</div><div class="ps-label">2-Col</div></div>
+  <div class="ps-item done"><div class="ps-circle">6</div><div class="ps-label">Cards</div></div>
+  <div class="ps-item done"><div class="ps-circle">7</div><div class="ps-label">CTA</div></div>
+  <div class="ps-item done"><div class="ps-circle">8</div><div class="ps-label">FAQ</div></div>
+  <div class="ps-item done"><div class="ps-circle">9</div><div class="ps-label">Footer</div></div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════
+     СТРУКТУРА ФАЙЛІВ
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="file-structure">
+  <h2>🗂️ Структура файлів проекту</h2>
+  <p class="section-intro">Проект складається з трьох файлів в одній папці. Розділення HTML і CSS — обов'язкова практика.</p>
+  <div class="card-grid">
+    <div class="info-card"><div class="ic-icon">📄</div><div class="ic-title">index.html</div><div class="ic-desc">Вся HTML розмітка сторінки. Структура і контент.</div></div>
+    <div class="info-card"><div class="ic-icon">🎨</div><div class="ic-title">styles.css</div><div class="ic-desc">Всі CSS стилі. Зовнішній файл підключається через &lt;link&gt;.</div></div>
+    <div class="info-card"><div class="ic-icon">📝</div><div class="ic-title">README.md</div><div class="ic-desc">Документація проекту для розробника і команди.</div></div>
+  </div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang">bash</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm"># Структура папки</span>
+Новая папка/
+├── index.html   <span class="t-comm"># ← головний HTML файл з розміткою сайту</span>
+├── styles.css   <span class="t-comm"># ← CSS стилі для оформлення сайту</span>
+└── README.md    <span class="t-comm"># ← документація</span></code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     HTML СКЕЛЕТ
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="html-base">
+  <h2>🏗️ HTML скелет — базова структура</h2>
+  <p class="section-intro">Кожен HTML файл починається з одного і того самого шаблону. Це фундамент, без якого браузер не зрозуміє що відображати.</p>
+
+  <div class="callout info">
+    <span class="icon">ℹ️</span>
+    <p><strong>lang="uk"</strong> — атрибут мови на &lt;html&gt; важливий для пошукових систем і скринридерів. Кодування <code>charset="UTF-8"</code> підтримує українські символи.</p>
+  </div>
+
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">&lt;!-- Перший рядок БУДЬ-ЯКОГО HTML файлу — тип документа --&gt;</span>
+<span class="t-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="t-tag">&lt;html</span> <span class="t-attr">lang</span>=<span class="t-val">"uk"</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;head&gt;</span>
+  <span class="t-comm">&lt;!-- Кодування символів: UTF-8 дозволяє правильно відображати українські літери --&gt;</span>
+  <span class="t-tag">&lt;meta</span> <span class="t-attr">charset</span>=<span class="t-val">"UTF-8"</span><span class="t-tag">&gt;</span>
+
+  <span class="t-comm">&lt;!-- Viewport для адаптивного дизайну: масштабує сторінку правильно на мобільних пристроях --&gt;</span>
+  <span class="t-tag">&lt;meta</span> <span class="t-attr">name</span>=<span class="t-val">"viewport"</span> <span class="t-attr">content</span>=<span class="t-val">"width=device-width, initial-scale=1.0"</span><span class="t-tag">&gt;</span>
+
+  <span class="t-comm">&lt;!-- Підключення зовнішнього CSS файлу для всієї стилізації сайту --&gt;</span>
+  <span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-val">"stylesheet"</span> <span class="t-attr">type</span>=<span class="t-val">"text/css"</span> <span class="t-attr">href</span>=<span class="t-val">"/styles.css"</span><span class="t-tag">&gt;</span>
+
+  <span class="t-comm">&lt;!-- Заголовок у вкладці браузера --&gt;</span>
+  <span class="t-tag">&lt;title&gt;</span>Заголовок - основна суть пропозиції<span class="t-tag">&lt;/title&gt;</span>
+<span class="t-tag">&lt;/head&gt;</span>
+
+<span class="t-comm">&lt;!--
+  ОСНОВНИЙ КОНТЕЙНЕР СТОРІНКИ
+  Усі явні елементи розміщуються всередину цього &lt;body&gt;
+--&gt;</span>
+<span class="t-tag">&lt;body&gt;</span>
+
+  <span class="t-comm">&lt;!-- ... всі блоки сторінки йдуть тут ... --&gt;</span>
+
+<span class="t-tag">&lt;/body&gt;</span>
+<span class="t-tag">&lt;/html&gt;</span></code></pre>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Тег / атрибут</th><th>Навіщо потрібен</th><th>Без нього</th></tr></thead>
+      <tbody>
+        <tr><td>&lt;!DOCTYPE html&gt;</td><td>Вмикає HTML5 режим браузера</td><td>Браузер рендерить по-старому</td></tr>
+        <tr><td>charset="UTF-8"</td><td>Кодування для кирилиці</td><td>??? замість українських літер</td></tr>
+        <tr><td>viewport meta</td><td>Правильне відображення на телефоні</td><td>Сайт зменшується до мурашиного розміру</td></tr>
+        <tr><td>link rel="stylesheet"</td><td>Підключає зовнішній CSS</td><td>Сайт без жодних стилів</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 1: HEADER
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-header">
+  <h2><span class="step-number">1</span> Блок: Header / Навігаційна панель</h2>
+  <p class="section-intro">Забезпечує швидку навігацію по сайту. Видима на всіх сторінках (sticky/липка позиція). Містить логотип, основні посилання, кнопку логіну.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">&lt;!--
+  СТРУКТУРА:
+  .header — зовнішній контейнер з фіксованою позицією
+  .nav — внутрішній контейнер з flex-layout для вирівнювання
+  .logo — логотип зліва (flex: 0 0 auto)
+  .nav-links — центральні посилання (flex: 1, gap: 30px)
+  .btn-login — кнопка справа (flex: 0 0 auto)
+--&gt;</span>
+<span class="t-tag">&lt;header</span> <span class="t-attr">class</span>=<span class="t-val">"header"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;nav</span> <span class="t-attr">class</span>=<span class="t-val">"nav"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ЛОГОТИП / БРЕНД
+      • Розміщений зліва за допомогою flex
+      • Має велику вагу шрифту (700) для видимості
+      • Темний колір #1f2937 для контрасту
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"logo"</span><span class="t-tag">&gt;</span>Логотип<span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      НАВІГАЦІЙНІ ПОСИЛАННЯ
+      • Розташовані в центрі
+      • flex: gap: 30px дає рівні проміжки
+      • Посилання мають підтримку :hover для інтерактивності
+      • id на секціях дозволяє перейти на них по кліку
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"nav-links"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section1"</span><span class="t-tag">&gt;</span>Link 1<span class="t-tag">&lt;/a&gt;</span>
+      <span class="t-tag">&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section2"</span><span class="t-tag">&gt;</span>Link 2<span class="t-tag">&lt;/a&gt;</span>
+      <span class="t-tag">&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section3"</span><span class="t-tag">&gt;</span>Link 3<span class="t-tag">&lt;/a&gt;</span>
+      <span class="t-tag">&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section4"</span><span class="t-tag">&gt;</span>Link 4<span class="t-tag">&lt;/a&gt;</span>
+      <span class="t-tag">&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section5"</span><span class="t-tag">&gt;</span>Link 5<span class="t-tag">&lt;/a&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      КНОПКА ВХОДУ
+      • Розташована справа
+      • Прозорий фон з тонкою межею
+      • При наведенні (hover) змінює фон на сірий
+      • Компактні розміри: padding 8px 16px
+    --&gt;</span>
+    <span class="t-tag">&lt;button</span> <span class="t-attr">class</span>=<span class="t-val">"btn-login"</span><span class="t-tag">&gt;</span>Вхід<span class="t-tag">&lt;/button&gt;</span>
+
+  <span class="t-tag">&lt;/nav&gt;</span>
+<span class="t-tag">&lt;/header&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/**
+ * КОНТЕЙНЕР HEADER
+ * position: sticky; top: 0 -> залишається закріплена в верхній частині при прокручуванні
+ * z-index: 100 -> видна вище інших елементів (важливо для overlay)
+ * background-color: #ffffff -> білий фон для контрасту
+ * border-bottom: 1px solid #e5e7eb -> тонка лінія відокремлює від вмісту
+ * padding: 12px 0 -> вертикальні вступи
+ */</span>
+<span class="t-sel">.header</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+  <span class="t-prop">border-bottom</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#e5e7eb</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">12px</span> <span class="t-num">0</span>;
+  <span class="t-prop">position</span>: <span class="t-kw">sticky</span>;
+  <span class="t-prop">top</span>: <span class="t-num">0</span>;
+  <span class="t-prop">z-index</span>: <span class="t-num">100</span>;
+}
+
+<span class="t-comm">/**
+ * NAV КОНТЕЙНЕР
+ * max-width: 1200px -> обмежена ширина вмісту
+ * margin: 0 auto -> центрування (0 верх/низ, auto боки)
+ * display: flex -> активує flexbox layout
+ * justify-content: space-between -> логотип ліворуч, посилання в центрі, кнопка праворуч
+ * align-items: center -> вертикальне центрування елементів
+ */</span>
+<span class="t-sel">.nav</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">0</span> <span class="t-num">20px</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">space-between</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+}
+
+<span class="t-comm">/**
+ * ЛОГОТИП / БРЕНДИНГ
+ * font-weight: 700 -> жирний шрифт для виділення
+ * color: #1f2937 -> темний колір для контрасту на білому фоні
+ */</span>
+<span class="t-sel">.logo</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">20px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">700</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+}
+
+<span class="t-comm">/**
+ * КОНТЕЙНЕР НАВІГАЦІЙНИХ ПОСИЛАНЬ
+ * display: flex -> розташування елементів в ряд
+ * gap: 30px -> відстань між кожним посиланням (30 пікселів)
+ */</span>
+<span class="t-sel">.nav-links</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">30px</span>;
+}
+
+<span class="t-comm">/**
+ * ОКРЕМЕ НАВІГАЦІЙНЕ ПОСИЛАННЯ
+ * text-decoration: none -> видаляє підкреслення
+ * color: #6b7280 -> світло-сірий колір
+ * transition: color 0.3s -> плавна зміна кольору при наведенні
+ * :hover -> color: #3b82f6 -> змінюється на яскравий синій колір
+ */</span>
+<span class="t-sel">.nav-links a</span> {
+  <span class="t-prop">text-decoration</span>: <span class="t-kw">none</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">transition</span>: <span class="t-prop">color</span> <span class="t-num">0.3s</span>;
+}
+<span class="t-sel">.nav-links a:hover</span> {
+  <span class="t-prop">color</span>: <span class="t-num">#3b82f6</span>;
+}
+
+<span class="t-comm">/**
+ * КНОПКА Входу (LOGIN)
+ * background-color: transparent -> прозорий фон (мінімалістично)
+ * border: 1px solid #d1d5db -> тонка світла межа
+ * padding: 8px 16px -> компактний розмір
+ * border-radius: 6px -> легка закругленість
+ * transition: all 0.3s -> плавна анімація всіх змін
+ * :hover -> background-color: #f3f4f6 -> світлий фон появляється
+ */</span>
+<span class="t-sel">.btn-login</span> {
+  <span class="t-prop">background-color</span>: <span class="t-kw">transparent</span>;
+  <span class="t-prop">border</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#d1d5db</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#374151</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">8px</span> <span class="t-num">16px</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">6px</span>;
+  <span class="t-prop">cursor</span>: <span class="t-kw">pointer</span>;
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">transition</span>: <span class="t-kw">all</span> <span class="t-num">0.3s</span>;
+}
+<span class="t-sel">.btn-login:hover</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 2: HERO
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-hero">
+  <h2><span class="step-number">2</span> Блок: Hero секція</h2>
+  <p class="section-intro">Перше що бачить користувач. Ліва колонка — заголовок h1, підзаголовок, кнопка CTA. Права колонка — зображення або ілюстрація. Макет: CSS Grid, 2 рівні колони.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"hero"</span><span class="t-tag">&gt;</span>
+
+  <span class="t-comm">&lt;!--
+    ЛІВА КОЛОНА — ВМІСТ
+    • flex-direction: column для вертикального перекладання
+    • gap: 24px для рівних відстаней між елементами
+    • Розташовується над зображенням на мобільних пристроях
+  --&gt;</span>
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"hero-content"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ОСНОВНИЙ ЗАГОЛОВОК
+      • font-size: 48px — експресивний, привертає увагу
+      • line-height: 1.2 — щільна лінія для потужності
+      • color: #1f2937 — темно-сірий, максимальний контраст
+      • font-weight: 700 — bold для виділення
+    --&gt;</span>
+    <span class="t-tag">&lt;h1</span> <span class="t-attr">class</span>=<span class="t-val">"hero-title"</span><span class="t-tag">&gt;</span>Заголовок — основна суть пропозиції<span class="t-tag">&lt;/h1&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ПІДЗАГОЛОВОК / ОПИСАННЯ
+      • font-size: 18px — дещо менше за основний для ієрархії
+      • color: #6b7280 — світло-сірий для вторинної інформації
+      • line-height: 1.6 — розширена для легкого читання
+    --&gt;</span>
+    <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-val">"hero-subtitle"</span><span class="t-tag">&gt;</span>Коротке пояснення пропозиції у
+      одній-двох строках для заохочування дії користувача до дії<span class="t-tag">&lt;/p&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      КНОПКА ДІЇ (CTA - Call To Action)
+      • .btn-primary — основна синя кнопка (#3b82f6)
+      • padding: 12px 32px — достатній розмір для натискання
+      • border-radius: 8px — м'які кути для сучасного вигляду
+      • transition: all 0.3s — плавна анімація при :hover
+      • При :hover: фон темніє, піднімається на 2px, додається тінь
+    --&gt;</span>
+    <span class="t-tag">&lt;button</span> <span class="t-attr">class</span>=<span class="t-val">"btn-primary"</span><span class="t-tag">&gt;</span>Почати прямо<span class="t-tag">&lt;/button&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-comm">&lt;!--
+    ПРАВА КОЛОНА — ЗОБРАЖЕННЯ
+    • .hero-image — потужний контейнер (400px × 400px)
+    • background-color: #f3f4f6 — світлий фон для контрасту
+    • border-radius: 12px — закруглені кути для м'якості
+    • display: flex + justify-content/align-items: center — центрування вмісту
+    Поточно містить .image-placeholder, але можна замінити:
+    &lt;img src="hero-image.svg" alt="Hero illustration"&gt;
+  --&gt;</span>
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"hero-image"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder"</span><span class="t-tag">&gt;&lt;/div&gt;</span>
+  <span class="t-tag">&lt;/div&gt;</span>
+
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/**
+ * КОНТЕЙНЕР ГЕРОЙ
+ * display: grid -> використовується grid (для складнішого макета)
+ * grid-template-columns: 1fr 1fr -> дві рівні колони (50%/50%)
+ * gap: 60px -> великий проміжок між колонами для простору
+ * align-items: center -> вертикально центрує контент
+ * На мобільних (@media): змінюється на 1 колону (div. @media)
+ */</span>
+<span class="t-sel">.hero</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span> <span class="t-num">1fr</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">60px</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+}
+
+<span class="t-comm">/**
+ * КОНТЕНТ ГЕРОЙ (Ліва колона з текстом)
+ * display: flex -> для розташування елементів
+ * flex-direction: column -> у вертикальному напрямку
+ * gap: 24px -> проміжок між h1, p, і кнопкою
+ */</span>
+<span class="t-sel">.hero-content</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">flex-direction</span>: <span class="t-kw">column</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">24px</span>;
+}
+
+<span class="t-comm">/**
+ * ОСНОВНИЙ ЗАГОЛОВОК ГЕРОЙ
+ * font-size: 48px -> дуже великий, виразний розмір
+ * font-weight: 700 -> максимально жирний (bold)
+ * color: #1f2937 -> темний колір для максимального контрасту
+ * line-height: 1.2 -> щільна висота рядків
+ * На мобільних: змінюється на 32px для читаності
+ */</span>
+<span class="t-sel">.hero-title</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">48px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">700</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.2</span>;
+}
+
+<span class="t-sel">.hero-subtitle</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">18px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}
+
+<span class="t-comm">/**
+ * ЗОБРАЖЕННЯ ГЕРОЙ (Права колона)
+ * display: flex -> центрує вміст
+ * height: 400px -> фіксована висота для балансу
+ * background-color: #f3f4f6 -> світлий фон для контрасту
+ * border-radius: 12px -> закруглені кути
+ */</span>
+<span class="t-sel">.hero-image</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">height</span>: <span class="t-num">400px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+}
+
+<span class="t-sel">.image-placeholder</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">120px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>;
+}
+
+<span class="t-comm">/**
+ * ОСНОВНА КНОПКА (btn-primary) — КНОПКИ (розділ 4 CSS)
+ * background-color: #3b82f6 -> яскравий синій колір (Tailwind blue-500)
+ * padding: 12px 32px -> комфортний розмір для натискання
+ * transition: all 0.3s -> плавна анімація всіх змін
+ * :hover -> піднімається на 2px + тінь
+ */</span>
+<span class="t-sel">.btn-primary</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#3b82f6</span>;
+  <span class="t-prop">color</span>: <span class="t-kw">white</span>;
+  <span class="t-prop">border</span>: <span class="t-kw">none</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">12px</span> <span class="t-num">32px</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">8px</span>;
+  <span class="t-prop">font-size</span>: <span class="t-num">16px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">cursor</span>: <span class="t-kw">pointer</span>;
+  <span class="t-prop">transition</span>: <span class="t-kw">all</span> <span class="t-num">0.3s</span>;
+  <span class="t-prop">width</span>: <span class="t-kw">fit-content</span>;
+}
+<span class="t-sel">.btn-primary:hover</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#2563eb</span>;
+  <span class="t-prop">transform</span>: <span class="t-fn">translateY</span>(<span class="t-num">-2px</span>);
+  <span class="t-prop">box-shadow</span>: <span class="t-num">0</span> <span class="t-num">10px</span> <span class="t-num">20px</span> <span class="t-fn">rgba</span>(<span class="t-num">59</span>, <span class="t-num">130</span>, <span class="t-num">246</span>, <span class="t-num">0.2</span>);
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 3: FEATURES
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-features">
+  <h2><span class="step-number">3</span> Блок: Features — картки особливостей</h2>
+  <p class="section-intro">Три картки з основними перевагами. Grid на 3 рівні колони. Кожна картка: іконка + заголовок + опис. При наведенні — піднімається на 5px.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"features"</span> <span class="t-attr">id</span>=<span class="t-val">"section1"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Заголовок #1<span class="t-tag">&lt;/h2&gt;</span>
+
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"features-grid"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      КАРТОЧКА 1
+      Тут розташовується перша особливість / переваги
+      Можна змінити іконку на інші emoji.
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-icon"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Підзаголовок<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Опис чогось цікавого в одній або двох речень
+        для інформування користувача<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- КАРТОЧКА 2 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-icon"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Підзаголовок<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Описание що-то интересное в одній або двох строках
+        для інформування користувача<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- КАРТОЧКА 3 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"feature-icon"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Підзаголовок<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Описание що-то интересное в одній або двох строках
+        для інформування користувача<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-sel">.features</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+}
+
+<span class="t-comm">/**
+ * ЗАГОЛОВОК СЕКЦІЇ (Універсальний клас)
+ * Використовується для всіх основних заголовків усіх секцій
+ * text-align: center -> центрує текст
+ * margin-bottom: 60px -> велике пространство перед контентом
+ * Клас .section-title застосовується У ВСІХ секціях:
+ * features, content-section, cards-section, faq-section тощо
+ */</span>
+<span class="t-sel">.section-title</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">36px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">700</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">text-align</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">60px</span>;
+}
+
+<span class="t-comm">/**
+ * СІТКА КАРТОЧОК
+ * grid-template-columns: repeat(3, 1fr) -> 3 рівні колони
+ * gap: 30px -> проміжок між карточками
+ * На мобільних (@media): змінюється на 1 колону для читаності
+ */</span>
+<span class="t-sel">.features-grid</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-fn">repeat</span>(<span class="t-num">3</span>, <span class="t-num">1fr</span>);
+  <span class="t-prop">gap</span>: <span class="t-num">30px</span>;
+}
+
+<span class="t-comm">/**
+ * ОДНА КАРТОЧКА (FEATURE-CARD)
+ * text-align: center -> центрує весь контент (іконка, заголовок, текст)
+ * :hover -> box-shadow + transform: translateY(-5px) — "летить вгору"
+ */</span>
+<span class="t-sel">.feature-card</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#f9fafb</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">40px</span> <span class="t-num">30px</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+  <span class="t-prop">text-align</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">transition</span>: <span class="t-kw">all</span> <span class="t-num">0.3s</span>;
+  <span class="t-prop">border</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#e5e7eb</span>;
+}
+<span class="t-sel">.feature-card:hover</span> {
+  <span class="t-prop">box-shadow</span>: <span class="t-num">0</span> <span class="t-num">10px</span> <span class="t-num">25px</span> <span class="t-fn">rgba</span>(<span class="t-num">0</span>, <span class="t-num">0</span>, <span class="t-num">0</span>, <span class="t-num">0.1</span>);
+  <span class="t-prop">transform</span>: <span class="t-fn">translateY</span>(<span class="t-num">-5px</span>);
+}
+
+<span class="t-sel">.feature-icon</span> { <span class="t-prop">font-size</span>: <span class="t-num">48px</span>; <span class="t-prop">margin-bottom</span>: <span class="t-num">20px</span>; }
+
+<span class="t-sel">.feature-card h3</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">18px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">12px</span>;
+}
+<span class="t-sel">.feature-card p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 4: CONTENT SECTION 2-COL
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-content">
+  <h2><span class="step-number">4</span> Блок: Content Section — 2 колонки з іконками</h2>
+  <p class="section-intro">Детальний опис переваги з прикладами. Ліва сторона — текст з іконками, права — зображення. Підтримує розповідь про продукт.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"content-section"</span> <span class="t-attr">id</span>=<span class="t-val">"section2"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Заголовок — про що блок #2<span class="t-tag">&lt;/h2&gt;</span>
+
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-grid"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ЛІВА КОЛОНА — ТЕКСТ З ІКОНКАМИ
+      flex-direction: column дає вертикальне розташування
+      gap: 30px дає простір між елементами
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-column"</span><span class="t-tag">&gt;</span>
+
+      <span class="t-comm">&lt;!-- Вступний текст для секції --&gt;</span>
+      <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-val">"section-intro"</span><span class="t-tag">&gt;</span>Короткий опис. Дніелемнизйно обясняємо
+        за 1-2 роки розроблення у розробці.<span class="t-tag">&lt;/p&gt;</span>
+
+      <span class="t-comm">&lt;!--
+        ПЕРШИЙ ЕЛЕМЕНТ З ІКОНКОЮ
+        Структура: іконка + контейнер з текстом
+        Іконка має flex-shrink: 0 щоб не стискалась
+      --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-item"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-icon"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+        <span class="t-tag">&lt;div&gt;</span>
+          <span class="t-tag">&lt;h4&gt;</span>Підзаголовок. Коза щотримує<span class="t-tag">&lt;/h4&gt;</span>
+          <span class="t-tag">&lt;p&gt;</span>Опис контенту. Розповідь про те як це допомагає та за
+            рахунок чого працює. Опис контенту.<span class="t-tag">&lt;/p&gt;</span>
+        <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+
+      <span class="t-comm">&lt;!-- ДРУГИЙ ЕЛЕМЕНТ З ІКОНКОЮ --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-item"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-icon"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+        <span class="t-tag">&lt;div&gt;</span>
+          <span class="t-tag">&lt;h4&gt;</span>Підзаголовок. Коза щотримує<span class="t-tag">&lt;/h4&gt;</span>
+          <span class="t-tag">&lt;p&gt;</span>Опис контенту. Розповідь про те як це допомагає та за
+            рахунок чого працює. Опис контенту.<span class="t-tag">&lt;/p&gt;</span>
+        <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ПРАВА КОЛОНА — ЗОБРАЖЕННЯ
+      • height: 400px — фіксована висота
+      • background: #f3f4f6 — світлий фон
+      На місці emoji розміщується реальне зображення:
+      &lt;img src="content-image.png" alt="Опис"&gt;
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-column"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"content-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-large"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-sel">.content-section</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+}
+
+<span class="t-comm">/**
+ * GRID LAYOUT (Ліва колона + Права колона)
+ * grid-template-columns: 1fr 1fr -> дві рівні колони (50%/50%)
+ * gap: 60px -> великий проміжок для дихання
+ * align-items: center -> вертикально центрує контент
+ * На мобільних: змінюється на 1 колону (через @media)
+ */</span>
+<span class="t-sel">.content-grid</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span> <span class="t-num">1fr</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">60px</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+}
+
+<span class="t-sel">.content-column</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">flex-direction</span>: <span class="t-kw">column</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">30px</span>;
+}
+
+<span class="t-sel">.section-intro</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">16px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">20px</span>;
+}
+
+<span class="t-comm">/**
+ * ЕЛЕМЕНТ З ІКОНКОЮ
+ * display: flex -> розташування в ряд
+ * gap: 20px -> проміжок між іконкою та текстом
+ */</span>
+<span class="t-sel">.content-item</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">20px</span>;
+}
+
+<span class="t-sel">.item-icon</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">40px</span>;
+  <span class="t-prop">flex-shrink</span>: <span class="t-num">0</span>; <span class="t-comm">/* не стискується, зберігає розмір */</span>
+}
+
+<span class="t-sel">.content-item h4</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">18px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">8px</span>;
+}
+<span class="t-sel">.content-item p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}
+
+<span class="t-comm">/**
+ * КОНТЕЙНЕР ЗОБРАЖЕННЯ (Права колона)
+ * display: flex -> центрує вміст
+ * height: 400px -> фіксована висота
+ * background-color: #f3f4f6 -> світлий фон
+ * border-radius: 12px -> м'які кути
+ */</span>
+<span class="t-sel">.content-image</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">height</span>: <span class="t-num">400px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+}
+<span class="t-sel">.image-placeholder-large</span> { <span class="t-prop">font-size</span>: <span class="t-num">100px</span>; <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>; }</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 5: TWO-COLUMN ITEMS
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-twocol">
+  <h2><span class="step-number">5</span> Блок: Two-Column Items — чергування</h2>
+  <p class="section-intro">Два елементи що чергуються: перший — текст зліва, зображення справа. Другий — зображення зліва, текст справа. Різноманітність макету для привернення уваги.</p>
+
+  <div class="callout tip">
+    <span class="icon">💡</span>
+    <p><strong>Як працює чергування:</strong> порядок тегів в HTML визначає позицію. Якщо зображення стоїть першим у HTML — воно ліворуч. Це простіше ніж CSS order.</p>
+  </div>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"two-column-section"</span> <span class="t-attr">id</span>=<span class="t-val">"section3"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Заголовок — про що блок #3<span class="t-tag">&lt;/h2&gt;</span>
+
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"two-column-grid"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ЕЛЕМЕНТ 1: ТЕКСТ ЗЛІВА, ЗОБРАЖЕННЯ СПРАВА
+      flexbox розташовує елементи в рядку
+      Зображення додається після тексту, але виглядає справа
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"two-column-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-comm">&lt;!--
+        ТЕКСТОВА ЧАСТИНА
+        h3 (20px, bold) — трохи менше за основні заголовки
+        p (14px) — опис з додатковою інформацією
+        flex: 1 — займає доступний простір
+      --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-content"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Підзаголовок. Як щотримує список<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;p&gt;</span>Опис контенту. Що-то про переваги та як це працює.
+          Опис контенту та інша важна інформація.<span class="t-tag">&lt;/p&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-comm">&lt;!-- ЗОБРАЖЕННЯ ЧАСТИНА --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-small"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ЕЛЕМЕНТ 2: ЗОБРАЖЕННЯ ЗЛІВА, ТЕКСТ СПРАВА (ІНВЕРСІЯ)
+      Зображення першим в HTML для natural flow
+      Це створює чергування на екрані для різноманітності
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"two-column-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-comm">&lt;!-- ЗОБРАЖЕННЯ ЧАСТИНА (ПЕРШОЇ ПОЗИЦІЇ) --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-small"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-comm">&lt;!-- ТЕКСТОВА ЧАСТИНА --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"item-content"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Підзаголовок. Як щотримує список<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;p&gt;</span>Опис контенту. Що-то про переваги та як це працює.
+          Опис контенту та інша важна інформація.<span class="t-tag">&lt;/p&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-sel">.two-column-section</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+}
+
+<span class="t-comm">/**
+ * СІТКА З ДВОМА ЕЛЕМЕНТАМИ
+ * grid-template-columns: repeat(2, 1fr) -> 2 рівні колони
+ * gap: 60px -> великий проміжок між ними
+ * На мобільних: змінюється на 1 колону (через @media)
+ */</span>
+<span class="t-sel">.two-column-grid</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-fn">repeat</span>(<span class="t-num">2</span>, <span class="t-num">1fr</span>);
+  <span class="t-prop">gap</span>: <span class="t-num">60px</span>;
+}
+
+<span class="t-comm">/**
+ * ОДИН ЕЛЕМЕНТ (ITEM)
+ * display: flex -> розташування в ряд
+ * gap: 30px -> проміжок між текстом та зображенням
+ * align-items: center -> вертикально центрує
+ * На мобільних: змінюється на flex-direction: column
+ */</span>
+<span class="t-sel">.two-column-item</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">30px</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+}
+
+<span class="t-sel">.item-content</span> { <span class="t-prop">flex</span>: <span class="t-num">1</span>; <span class="t-comm">/* займає весь доступний простір */</span> }
+
+<span class="t-sel">.item-content h3</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">20px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">12px</span>;
+}
+<span class="t-sel">.item-content p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}
+
+<span class="t-comm">/**
+ * ЗОБРАЖЕННЯ ЕЛЕМЕНТА
+ * flex: 0 0 300px -> не розтягується, не стискується, 300px ширина
+ * height: 300px -> квадратне зображення
+ * background-color: #f3f4f6 -> світлий фон
+ */</span>
+<span class="t-sel">.item-image</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">height</span>: <span class="t-num">300px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+  <span class="t-prop">flex</span>: <span class="t-num">0</span> <span class="t-num">0</span> <span class="t-num">300px</span>;
+}
+<span class="t-sel">.image-placeholder-small</span> { <span class="t-prop">font-size</span>: <span class="t-num">80px</span>; <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>; }</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 6: INFO CARDS
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-cards">
+  <h2><span class="step-number">6</span> Блок: Info Cards — картки з зображеннями</h2>
+  <p class="section-intro">Показати колекцію продуктів / сервісів / кейсів. Кожна картка: зображення (висота 250px) + назва + опис. При наведенні піднімається на 5px.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"cards-section"</span> <span class="t-attr">id</span>=<span class="t-val">"section4"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Заголовок інформаційних карток<span class="t-tag">&lt;/h2&gt;</span>
+
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"cards-grid"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      КАРТОЧКА 1
+      Порядок: зображення (вгорі) → заголовок → опис (внизу)
+      Коли наводиш мишку, вся карточка піднімається
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"info-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-comm">&lt;!--
+        ОБЛАСТЬ ЗОБРАЖЕННЯ
+        • height: 250px — фіксована висота
+        • background: #f3f4f6 — світлий плейсхолдер фон
+        • display: flex + justify-content/align-items: center
+          щоб центрувати зображення
+      --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"card-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-card"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Назва картки 1<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Опис від дня 1-2 років числе у строку для інформування<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- КАРТОЧКА 2 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"info-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"card-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-card"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Назва картки 2<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Опис від дня 1-2 років числе у строку для інформування<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- КАРТОЧКА 3 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"info-card"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"card-image"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"image-placeholder-card"</span><span class="t-tag">&gt;</span>(фото)<span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;h3&gt;</span>Назва картки 3<span class="t-tag">&lt;/h3&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>Опис від дня 1-2 років числе у строку для інформування<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-sel">.cards-section</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+}
+
+<span class="t-sel">.cards-grid</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-fn">repeat</span>(<span class="t-num">3</span>, <span class="t-num">1fr</span>);
+  <span class="t-prop">gap</span>: <span class="t-num">30px</span>;
+}
+
+<span class="t-comm">/**
+ * ІНФОРМАЦІЙНА КАРТОЧКА
+ * overflow: hidden -> приховує контент за границями (для закруглених кутів на img)
+ * :hover -> box-shadow + transform: translateY(-5px) -> "летить вгору"
+ */</span>
+<span class="t-sel">.info-card</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+  <span class="t-prop">border</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#e5e7eb</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+  <span class="t-prop">overflow</span>: <span class="t-kw">hidden</span>;
+  <span class="t-prop">transition</span>: <span class="t-kw">all</span> <span class="t-num">0.3s</span>;
+}
+<span class="t-sel">.info-card:hover</span> {
+  <span class="t-prop">box-shadow</span>: <span class="t-num">0</span> <span class="t-num">10px</span> <span class="t-num">25px</span> <span class="t-fn">rgba</span>(<span class="t-num">0</span>, <span class="t-num">0</span>, <span class="t-num">0</span>, <span class="t-num">0.1</span>);
+  <span class="t-prop">transform</span>: <span class="t-fn">translateY</span>(<span class="t-num">-5px</span>);
+}
+
+<span class="t-comm">/**
+ * БЛОК ЗОБРАЖЕННЯ КАРТОЧКИ
+ * height: 250px -> фіксована висота для узгодженості між картками
+ */</span>
+<span class="t-sel">.card-image</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">height</span>: <span class="t-num">250px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+}
+<span class="t-sel">.image-placeholder-card</span> { <span class="t-prop">font-size</span>: <span class="t-num">80px</span>; <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>; }
+
+<span class="t-sel">.info-card h3</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">18px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">20px</span> <span class="t-num">20px</span> <span class="t-num">8px</span>;
+}
+<span class="t-sel">.info-card p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">0</span> <span class="t-num">20px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 7: CTA
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-cta">
+  <h2><span class="step-number">7</span> Блок: CTA — заклик до дії</h2>
+  <p class="section-intro">Останній заклик до дії перед FAQ. Переконує користувача взяти акцію. Має контрастний фон для виділення. Текст і кнопка по центру.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"cta-section"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Заголовок — про що блок<span class="t-tag">&lt;/h2&gt;</span>
+  <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-val">"cta-text"</span><span class="t-tag">&gt;</span>Опис. Коротке пояснення та причину чому вартоко
+    це займати. Опис та інша інформація про користь.<span class="t-tag">&lt;/p&gt;</span>
+  <span class="t-tag">&lt;button</span> <span class="t-attr">class</span>=<span class="t-val">"btn-primary"</span><span class="t-tag">&gt;</span>Почати прямо<span class="t-tag">&lt;/button&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/**
+ * CTA КОНТЕЙНЕР
+ * background-color: #f3f4f6 -> світлий фон (контрастує з білим)
+ * border-radius: 12px -> м'які кути (як карточка)
+ * text-align: center -> центрує весь контент
+ * display: flex + flex-direction: column + gap: 24px
+ * align-items: center -> горизонтально центрує кнопку
+ */</span>
+<span class="t-sel">.cta-section</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">60px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">12px</span>;
+  <span class="t-prop">text-align</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">flex-direction</span>: <span class="t-kw">column</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">24px</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+}
+
+<span class="t-sel">.cta-text</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">16px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">max-width</span>: <span class="t-num">600px</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 8: FAQ
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-faq">
+  <h2><span class="step-number">8</span> Блок: FAQ — часті запитання</h2>
+  <p class="section-intro">Відповідає на найпоширеніші питання. Кожне питання розгортаємого типу. JavaScript слухач на .faq-question додає/видаляє клас .active, CSS показує відповідь.</p>
+
+  <div class="callout info">
+    <span class="icon">ℹ️</span>
+    <p><strong>Як це працює:</strong> JS додає клас <code>.active</code> → CSS правило <code>.faq-item.active .faq-answer</code> вмикає <code>display: block</code> → відповідь з'являється. Іконка <code>+</code> обертається на 45° через <code>rotate(45deg)</code>.</p>
+  </div>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;section</span> <span class="t-attr">class</span>=<span class="t-val">"faq-section"</span> <span class="t-attr">id</span>=<span class="t-val">"section5"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;h2</span> <span class="t-attr">class</span>=<span class="t-val">"section-title"</span><span class="t-tag">&gt;</span>Поширені запитання<span class="t-tag">&lt;/h2&gt;</span>
+
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-container"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      ПИТАННЯ 1 — ШАБЛОН
+      Структура: .faq-item &gt; .faq-question + .faq-answer
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-comm">&lt;!--
+        КЛІКАБЕЛЬНА ОБЛАСТЬ
+        Містить питання (h3) та іконку toggle (+)
+        При кліку: запускається JavaScript для toggle .active
+        Потім CSS показує .faq-answer
+      --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-question"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Запитання як це працює?<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;span</span> <span class="t-attr">class</span>=<span class="t-val">"faq-toggle"</span><span class="t-tag">&gt;</span>+<span class="t-tag">&lt;/span&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-comm">&lt;!--
+        ПРИХОВАНА ОБЛАСТЬ ВІДПОВІДІ
+        Показується тільки коли батьківський .faq-item має .active
+        display: none (або display: block при .active)
+      --&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-answer"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;p&gt;</span>відповідь на запитання<span class="t-tag">&lt;/p&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- ПИТАННЯ 2 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-question"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Запитання про вартість<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;span</span> <span class="t-attr">class</span>=<span class="t-val">"faq-toggle"</span><span class="t-tag">&gt;</span>+<span class="t-tag">&lt;/span&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-answer"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;p&gt;</span>Відповідь на запитання<span class="t-tag">&lt;/p&gt;</span><span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- ПИТАННЯ 3 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-question"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Запитання про підтримку<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;span</span> <span class="t-attr">class</span>=<span class="t-val">"faq-toggle"</span><span class="t-tag">&gt;</span>+<span class="t-tag">&lt;/span&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-answer"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;p&gt;</span>Відповідь на запитання<span class="t-tag">&lt;/p&gt;</span><span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!-- ПИТАННЯ 4 --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-item"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-question"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;h3&gt;</span>Запитання про результати<span class="t-tag">&lt;/h3&gt;</span>
+        <span class="t-tag">&lt;span</span> <span class="t-attr">class</span>=<span class="t-val">"faq-toggle"</span><span class="t-tag">&gt;</span>+<span class="t-tag">&lt;/span&gt;</span>
+      <span class="t-tag">&lt;/div&gt;</span>
+      <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"faq-answer"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;p&gt;</span>Відповідь на запитання<span class="t-tag">&lt;/p&gt;</span><span class="t-tag">&lt;/div&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/section&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-sel">.faq-section</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">80px</span> <span class="t-num">20px</span>;
+}
+
+<span class="t-comm">/**
+ * КОНТЕЙНЕР ДЛЯ ЗАПИТАНЬ
+ * display: flex + flex-direction: column + gap: 20px
+ */</span>
+<span class="t-sel">.faq-container</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">flex-direction</span>: <span class="t-kw">column</span>;
+  <span class="t-prop">gap</span>: <span class="t-num">20px</span>;
+}
+
+<span class="t-sel">.faq-item</span> {
+  <span class="t-prop">border</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#e5e7eb</span>;
+  <span class="t-prop">border-radius</span>: <span class="t-num">8px</span>;
+  <span class="t-prop">overflow</span>: <span class="t-kw">hidden</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+}
+
+<span class="t-comm">/**
+ * КЛІК-ЗДАТНА ОБЛАСТЬ (Запитання)
+ * justify-content: space-between -> питання ліворуч, іконка + праворуч
+ * cursor: pointer -> показує що це клік-здатне
+ * :hover -> background-color: #f3f4f6 -> потемніває, дає зворотний зв'язок
+ */</span>
+<span class="t-sel">.faq-question</span> {
+  <span class="t-prop">padding</span>: <span class="t-num">20px</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">flex</span>;
+  <span class="t-prop">justify-content</span>: <span class="t-kw">space-between</span>;
+  <span class="t-prop">align-items</span>: <span class="t-kw">center</span>;
+  <span class="t-prop">cursor</span>: <span class="t-kw">pointer</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f9fafb</span>;
+  <span class="t-prop">transition</span>: <span class="t-kw">all</span> <span class="t-num">0.3s</span>;
+  <span class="t-prop">border-bottom</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#e5e7eb</span>;
+}
+<span class="t-sel">.faq-question:hover</span> { <span class="t-prop">background-color</span>: <span class="t-num">#f3f4f6</span>; }
+
+<span class="t-sel">.faq-question h3</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">16px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span>;
+}
+
+<span class="t-comm">/**
+ * TOGGLE ІКОНКА (+ Знак)
+ * При .active клас (додається через JS):
+ * transform: rotate(45deg) -> обертається на 45° (+ стає ─)
+ */</span>
+<span class="t-sel">.faq-toggle</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">24px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#3b82f6</span>;
+  <span class="t-prop">transition</span>: <span class="t-prop">transform</span> <span class="t-num">0.3s</span>;
+}
+
+<span class="t-comm">/**
+ * ВІДПОВІДЬ НА ЗАПИТАННЯ
+ * display: none -> прихована за замовчуванням
+ * При .active на .faq-item (через JS): display: block -> стає видимою
+ */</span>
+<span class="t-sel">.faq-answer</span> {
+  <span class="t-prop">padding</span>: <span class="t-num">20px</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">none</span>;
+  <span class="t-prop">background-color</span>: <span class="t-num">#ffffff</span>;
+}
+<span class="t-sel">.faq-answer p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#6b7280</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}
+
+<span class="t-comm">/* === КЕРУВАННЯ JAVASCRIPT ===
+   Коли користувач клікає на .faq-question:
+   1. JavaScript додає клас .active до .faq-item
+   2. Нижчі селектори автоматично активуються */</span>
+
+<span class="t-sel">.faq-item.active .faq-answer</span> {
+  <span class="t-prop">display</span>: <span class="t-kw">block</span>; <span class="t-comm">/* показує відповідь */</span>
+}
+<span class="t-sel">.faq-item.active .faq-toggle</span> {
+  <span class="t-prop">transform</span>: <span class="t-fn">rotate</span>(<span class="t-num">45deg</span>); <span class="t-comm">/* обертає іконку + на × */</span>
+}</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     БЛОК 9: FOOTER
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-footer-html">
+  <h2><span class="step-number">9</span> Блок: Footer / Підвал сайту</h2>
+  <p class="section-intro">Останній розділ сторінки. Містить: копірайт, посилання, контакти. Темний фон для контрасту з рештою. Grid на 3 колони.</p>
+
+  <div class="block-label">HTML — index.html</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang html">HTML</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;footer</span> <span class="t-attr">class</span>=<span class="t-val">"footer"</span><span class="t-tag">&gt;</span>
+  <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"footer-content"</span><span class="t-tag">&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      СЕКЦІЯ 1: ПРО НАС / КОМПАНІЯ
+      Стандартна інформація про компанію / авторські права
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"footer-section"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;h4&gt;</span>Про нас<span class="t-tag">&lt;/h4&gt;</span>
+      <span class="t-tag">&lt;p&gt;</span>© 2024 Компанія. Всі права захищені.<span class="t-tag">&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      СЕКЦІЯ 2: НАВІГАЦІЯ / ПОСИЛАННЯ
+      Посилання на основні розділи сайту (для SEO + UX)
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"footer-section"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;h4&gt;</span>Навіґація<span class="t-tag">&lt;/h4&gt;</span>
+      <span class="t-tag">&lt;ul&gt;</span>
+        <span class="t-comm">&lt;!-- Посилання на якорі (anchors) з ID на сторінці --&gt;</span>
+        <span class="t-tag">&lt;li&gt;&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section1"</span><span class="t-tag">&gt;</span>Link 1<span class="t-tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="t-tag">&lt;li&gt;&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section2"</span><span class="t-tag">&gt;</span>Link 2<span class="t-tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="t-tag">&lt;li&gt;&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"#section3"</span><span class="t-tag">&gt;</span>Link 3<span class="t-tag">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="t-tag">&lt;/ul&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+    <span class="t-comm">&lt;!--
+      СЕКЦІЯ 3: КОНТАКТИ
+      mailto: — відкриває email клієнт користувача
+      tel: — дозволяє зателефонувати на мобільних
+    --&gt;</span>
+    <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-val">"footer-section"</span><span class="t-tag">&gt;</span>
+      <span class="t-tag">&lt;h4&gt;</span>Контакти<span class="t-tag">&lt;/h4&gt;</span>
+      <span class="t-tag">&lt;p&gt;&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452c2b232a05262a2835242b3c6b262a28">[email&#160;protected]</a>"</span><span class="t-tag">&gt;</span>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e0898e868fa0838f8d90818e99ce838f8d">[email&#160;protected]</a><span class="t-tag">&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="t-tag">&lt;p&gt;&lt;a</span> <span class="t-attr">href</span>=<span class="t-val">"tel:+380123456789"</span><span class="t-tag">&gt;</span>Phone: +38 (0XX) XXX-XX-XX<span class="t-tag">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="t-tag">&lt;/div&gt;</span>
+
+  <span class="t-tag">&lt;/div&gt;</span>
+<span class="t-tag">&lt;/footer&gt;</span></code></pre>
+  </div>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/**
+ * КОНТЕЙНЕР НИЖНЬОГО КОЛОНТИТУЛУ
+ * background-color: #1f2937 -> темно-сірий (контраст з рештою)
+ * color: #e5e7eb -> світло-сірий текст
+ * margin-top: 80px -> великий проміжок перед нижнім колонтитулом
+ */</span>
+<span class="t-sel">.footer</span> {
+  <span class="t-prop">background-color</span>: <span class="t-num">#1f2937</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#e5e7eb</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">60px</span> <span class="t-num">20px</span> <span class="t-num">20px</span>;
+  <span class="t-prop">margin-top</span>: <span class="t-num">80px</span>;
+}
+
+<span class="t-comm">/**
+ * КОНТЕНТ ФУТЕР (GRID LAYOUT 3 КОЛОНИ)
+ * grid-template-columns: repeat(3, 1fr) -> 3 рівні колони
+ * border-bottom: 1px solid #374151 -> межа перед додаткової інформацією
+ * На мобільних: змінюється на 1 колону
+ */</span>
+<span class="t-sel">.footer-content</span> {
+  <span class="t-prop">max-width</span>: <span class="t-num">1200px</span>;
+  <span class="t-prop">margin</span>: <span class="t-num">0</span> <span class="t-kw">auto</span>;
+  <span class="t-prop">display</span>: <span class="t-kw">grid</span>;
+  <span class="t-prop">grid-template-columns</span>: <span class="t-fn">repeat</span>(<span class="t-num">3</span>, <span class="t-num">1fr</span>);
+  <span class="t-prop">gap</span>: <span class="t-num">40px</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">40px</span>;
+  <span class="t-prop">padding-bottom</span>: <span class="t-num">40px</span>;
+  <span class="t-prop">border-bottom</span>: <span class="t-num">1px</span> <span class="t-kw">solid</span> <span class="t-num">#374151</span>;
+}
+
+<span class="t-sel">.footer-section h4</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">16px</span>;
+  <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#ffffff</span>;
+  <span class="t-prop">margin-bottom</span>: <span class="t-num">12px</span>;
+}
+<span class="t-sel">.footer-section p</span> {
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}
+<span class="t-sel">.footer-section ul</span> { <span class="t-prop">list-style</span>: <span class="t-kw">none</span>; }
+<span class="t-sel">.footer-section ul li</span> { <span class="t-prop">margin-bottom</span>: <span class="t-num">8px</span>; }
+
+<span class="t-comm">/**
+ * ПОСИЛАННЯ У НИЖНЬОМУ КОЛОНТИТУЛІ
+ * :hover -> color: #3b82f6 -> змінюється на синій
+ */</span>
+<span class="t-sel">.footer-section a</span> {
+  <span class="t-prop">color</span>: <span class="t-num">#d1d5db</span>;
+  <span class="t-prop">text-decoration</span>: <span class="t-kw">none</span>;
+  <span class="t-prop">font-size</span>: <span class="t-num">14px</span>;
+  <span class="t-prop">transition</span>: <span class="t-prop">color</span> <span class="t-num">0.3s</span>;
+}
+<span class="t-sel">.footer-section a:hover</span> { <span class="t-prop">color</span>: <span class="t-num">#3b82f6</span>; }</code></pre>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="block-js">
+  <h2>⚙️ JavaScript — FAQ toggle логіка</h2>
+  <p class="section-intro">Скрипт розміщується перед закриваючим тегом &lt;/body&gt;. Знаходить всі .faq-question і для кожного додає слухач на клік.</p>
+
+  <div class="block-label">JS — всередині index.html перед &lt;/body&gt;</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang js">JS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-tag">&lt;script&gt;</span>
+  <span class="t-comm">// Вибираємо всі елементи, на яких можна нажати</span>
+  <span class="t-fn">document</span>.<span class="t-fn">querySelectorAll</span>(<span class="t-str">'.faq-question'</span>).<span class="t-fn">forEach</span>(<span class="t-var">question</span> <span class="t-kw">=&gt;</span> {
+
+    <span class="t-comm">// Для кожного питання додаємо слухач на клік</span>
+    <span class="t-var">question</span>.<span class="t-fn">addEventListener</span>(<span class="t-str">'click'</span>, <span class="t-kw">function</span>() {
+
+      <span class="t-comm">// Знаходимо батьківський .faq-item</span>
+      <span class="t-kw">const</span> <span class="t-var">faqItem</span> = <span class="t-kw">this</span>.<span class="t-fn">closest</span>(<span class="t-str">'.faq-item'</span>);
+
+      <span class="t-comm">// Переключаємо клас .active (add / remove)</span>
+      <span class="t-var">faqItem</span>.<span class="t-fn">classList</span>.<span class="t-fn">toggle</span>(<span class="t-str">'active'</span>);
+    });
+  });
+<span class="t-tag">&lt;/script&gt;</span></code></pre>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Метод</th><th>Що робить</th></tr></thead>
+      <tbody>
+        <tr><td>querySelectorAll()</td><td>Вибирає ВСІ елементи що збігаються з CSS селектором → NodeList</td></tr>
+        <tr><td>.forEach()</td><td>Перебирає кожен елемент із NodeList</td></tr>
+        <tr><td>addEventListener('click', fn)</td><td>Вішає обробник кліку на елемент</td></tr>
+        <tr><td>.closest(selector)</td><td>Шукає найближчого батька що відповідає селектору</td></tr>
+        <tr><td>classList.toggle(class)</td><td>Додає клас якщо немає, видаляє якщо є</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     CSS RESET + @MEDIA
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="css-reset">
+  <h2>🎨 CSS — Reset, body, @media</h2>
+  <p class="section-intro">Глобальні стилі — перший розділ styles.css. Reset скидає стандарти браузера. @media — адаптивність для мобільних.</p>
+
+  <div class="block-label css-label">CSS — styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/* РОЗДІЛ 1: ГЛОБАЛЬНІ СТИЛІ ТА СКИДАННЯ ===================
+
+ * УНІВЕРСАЛЬНИЙ СЕЛЕКТОР (*)
+ * margin: 0; padding: 0  -> видаляє вступи браузера за замовчуванням
+ * box-sizing: border-box -> включає padding/border в розрахунок ширини/висоти
+ */</span>
+<span class="t-sel">*</span> {
+  <span class="t-prop">margin</span>: <span class="t-num">0</span>;
+  <span class="t-prop">padding</span>: <span class="t-num">0</span>;
+  <span class="t-prop">box-sizing</span>: <span class="t-kw">border-box</span>;
+}
+
+<span class="t-comm">/**
+ * ГЛОБАЛЬНІ СТИЛІ BODY
+ * font-family: -apple-system... -> системні шрифти для швидкого завантаження
+ *   • -apple-system -> San Francisco на macOS
+ *   • BlinkMacSystemFont -> iOS Safari
+ *   • 'Segoe UI' -> Windows
+ *   • Roboto -> Android
+ * background-color: #f9fafb -> дуже світло-сірий фон сторінки
+ * color: #333 -> темний колір тексту для хорошої читабельності
+ * line-height: 1.6 -> проміжок між рядками для зручності читання
+ */</span>
+<span class="t-sel">body</span> {
+  <span class="t-prop">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="t-str">'Segoe UI'</span>, Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  <span class="t-prop">background-color</span>: <span class="t-num">#f9fafb</span>;
+  <span class="t-prop">color</span>: <span class="t-num">#333</span>;
+  <span class="t-prop">line-height</span>: <span class="t-num">1.6</span>;
+}</code></pre>
+  </div>
+
+  <div class="doc-section" id="css-media" style="margin-bottom:0">
+  <h3>📱 @media — адаптивний дизайн</h3>
+  <p>Стилі що спрацьовують тільки на екранах менше 768px. Grid колони змінюються на 1 колону, заголовки стають менші, flex міняє напрямок.</p>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/**
+ * @media (max-width: 768px)
+ * Змінює стилі для екранів менше 768px (телефони, планшети)
+ * 1. Заголовки стають менші
+ * 2. Grid колони змінюються на 1 колону
+ * 3. Padding/Gap зменшується для мобільних
+ * 4. Flexbox змінює напрямок на column
+ * 5. Зображення стають більш гнучкими
+ */</span>
+<span class="t-sel">@media</span> (<span class="t-prop">max-width</span>: <span class="t-num">768px</span>) {
+
+  <span class="t-sel">.hero</span> {
+    <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span>;
+    <span class="t-prop">padding</span>: <span class="t-num">40px</span> <span class="t-num">20px</span>;
+  }
+
+  <span class="t-sel">.hero-title</span> { <span class="t-prop">font-size</span>: <span class="t-num">32px</span>; }
+
+  <span class="t-sel">.features-grid</span>,
+  <span class="t-sel">.cards-grid</span>,
+  <span class="t-sel">.two-column-grid</span> {
+    <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span>;
+  }
+
+  <span class="t-sel">.content-grid</span> { <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span>; }
+
+  <span class="t-sel">.two-column-item</span> { <span class="t-prop">flex-direction</span>: <span class="t-kw">column</span>; }
+
+  <span class="t-sel">.item-image</span> { <span class="t-prop">flex</span>: <span class="t-num">1</span> <span class="t-num">1</span> <span class="t-kw">auto</span>; }
+
+  <span class="t-sel">.nav-links</span> { <span class="t-prop">gap</span>: <span class="t-num">15px</span>; }
+
+  <span class="t-sel">.footer-content</span> { <span class="t-prop">grid-template-columns</span>: <span class="t-num">1fr</span>; }
+}</code></pre>
+  </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ДИЗАЙН-СИСТЕМА
+════════════════════════════════════════════════════════ -->
+<section class="doc-section" id="design-system">
+  <h2>🎨 Дизайн-система проекту</h2>
+  <p class="section-intro">Оригінальний коментар-резюме з кінця styles.css — опис всієї системи кольорів, типографії та відступів.</p>
+
+  <div class="block-label css-label">CSS — коментар в кінці styles.css</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-lang css">CSS</span><button class="copy-btn" onclick="copyCode(this)">copy</button></div>
+    <pre><code><span class="t-comm">/*
+═══════════════════════════════════════════════════════════
+РЕЗЮМЕ: ЯК ПРАЦЮЄ ВСЯ СИСТЕМА
+
+КОЛІРНА ПАЛІТРА (6 основних кольорів):
+┌─ Фон: #f9fafb (дуже світло-сірий)
+├─ Карточки: #ffffff (чистий білий)
+├─ Первинний: #3b82f6 (яскравий синій для акцентів)
+├─ Темний текст: #1f2937 (для заголовків)
+├─ Світлий текст: #6b7280 (для описів)
+└─ Межі: #e5e7eb (ледве видні лінії)
+
+ТИПОГРАФІЯ (3 рівні шрифтів):
+┌─ Заголовки: 48px -&gt; 36px -&gt; 20px -&gt; 16px (спадаючі)
+├─ Основний текст: 16px, line-height: 1.6
+└─ Малий текст: 14px для деталей
+
+МАКЕТ (Golden Ratio паттерни):
+┌─ Контент: max-width 1200px, центрований
+├─ Вертикальний паддинг: 80px для просторності
+├─ Горизонтальний паддинг: 20px для мобільних
+├─ Проміжки (gap): 60px (великі), 30px (малі), 20px (компактні)
+└─ Закругленість: 12px (елементи), 8px (кнопки), 6px (компактні)
+
+ІНТЕРАКТИВНІСТЬ (Feedback паттерни):
+┌─ Колір змінюється (.text-color, .bg-color)
+├─ Тінь додається (box-shadow)
+├─ Піднімається (transform: translateY)
+└─ Все з transition: 0.3s (плавно)
+
+АДАПТИВНІСТЬ (Breakpoints):
+┌─ Desktop: повний grid layout (2-3 колони)
+├─ Tablet (768px): 2 колони -&gt; 1 колона
+└─ Mobile (&lt;768px): завжди 1 колона
+
+═══════════════════════════════════════════════════════════
+*/</span></code></pre>
+  </div>
+</section>
+
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo">🌐 DevOpsDeveloper</span>
+    <span>HTML · CSS · JavaScript · 9 блоків</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function copyCode(btn) {
+    const pre = btn.closest('.code-block').querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(() => {
+      btn.textContent = 'copied!';
+      btn.style.background = '#5a9e6f';
+      btn.style.color = '#1c1410';
+      setTimeout(() => { btn.textContent = 'copy'; btn.style.background = ''; btn.style.color = ''; }, 1600);
+    });
+  }
+
+  // Highlight active sidebar link on scroll
+  const sections = document.querySelectorAll('.doc-section[id]');
+  const links = document.querySelectorAll('.sb-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e =
