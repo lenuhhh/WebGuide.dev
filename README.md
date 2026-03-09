@@ -304,10 +304,16 @@ code .
 <table style="border:0;border-collapse:separate;border-spacing:10px">
 <tr>
   <td align="center" style="background:#f4eeeb;padding:14px 22px;border-radius:10px;border:1px solid #b3a696">
-    <a href="[[https://github.com/webguide-dev](https://github.com/lenuhhh](https://github.com/lenuhhh))">🐙 <b>GitHub</b></a><br/><sub>@Lenuhhh</sub>
+    <a href="mailto:hello@webguide.dev">✉️ <b>Email</b></a><br/><sub>hello@webguide.dev</sub>
   </td>
-    <td align="center" style="background:#f4eeeb;padding:14px 22px;border-radius:10px;border:1px solid #b3a696">
-    <a href="[[t.me/Leastmorr))">🐙 <b>GitHub</b></a><br/><sub>@Leastmorr</sub>
+  <td align="center" style="background:#f4eeeb;padding:14px 22px;border-radius:10px;border:1px solid #b3a696">
+    <a href="https://github.com/webguide-dev">🐙 <b>GitHub</b></a><br/><sub>@webguide-dev</sub>
+  </td>
+  <td align="center" style="background:#f4eeeb;padding:14px 22px;border-radius:10px;border:1px solid #b3a696">
+    <a href="https://t.me/webguide_dev">✈️ <b>Telegram</b></a><br/><sub>@webguide_dev</sub>
+  </td>
+  <td align="center" style="background:#f4eeeb;padding:14px 22px;border-radius:10px;border:1px solid #b3a696">
+    <a href="https://instagram.com/webguide.dev">📸 <b>Instagram</b></a><br/><sub>@webguide.dev</sub>
   </td>
 </tr>
 </table>
@@ -323,7 +329,7 @@ code .
 <div align="center">
 <table width="100%" style="border:0;background:#292e1e;border-radius:12px"><tr><td align="center" style="padding:28px 24px">
 
-### 🌿 Якщо гайд був корисний — Я буду дуже вдячний вам!
+### 🌿 Якщо гайд був корисний — постав ⭐ на GitHub
 
 *Це допомагає проєкту розвиватись і публікувати нові матеріали*
 
