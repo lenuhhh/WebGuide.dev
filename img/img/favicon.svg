@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <!-- Deep dark background gradient -->
+    <radialGradient id="bg" cx="35%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#2a2720"/>
+      <stop offset="100%" stop-color="#0f0e0c"/>
+    </radialGradient>
+
+    <!-- Gold shimmer gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0b0"/>
+      <stop offset="35%" stop-color="#e8c97a"/>
+      <stop offset="100%" stop-color="#9a6e1a"/>
+    </linearGradient>
+
+    <!-- Gold for border -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c97a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#6b4c10" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Glow filter for the chevron -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Soft inner shadow for depth -->
+    <filter id="innerShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feFlood flood-color="#000" flood-opacity="0.4" result="color"/>
+      <feComposite in="color" in2="SourceGraphic" operator="in" result="shadow"/>
+      <feGaussianBlur in="shadow" stdDeviation="1.5" result="blurShadow"/>
+      <feMerge><feMergeNode in="blurShadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+
+  <!-- Subtle noise texture overlay -->
+  <rect width="32" height="32" rx="6" fill="none" stroke="url(#goldBorder)" stroke-width="0.8"/>
+
+  <!-- Top-left corner accent lines -->
+  <line x1="2" y1="6" x2="2" y2="2" stroke="#e8c97a" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+  <line x1="2" y1="2" x2="6" y2="2" stroke="#e8c97a" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Bottom-right corner accent lines -->
+  <line x1="30" y1="26" x2="30" y2="30" stroke="#e8c97a" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+  <line x1="30" y1="30" x2="26" y2="30" stroke="#e8c97a" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- ── DOUBLE CHEVRON >> ── -->
+  <!-- Back chevron (dimmer) -->
+  <polyline
+    points="8,11.5 13.5,16 8,20.5"
+    fill="none"
+    stroke="#e8c97a"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.28"
+  />
+
+  <!-- Front chevron (bright + glow) -->
+  <polyline
+    points="13,11.5 18.5,16 13,20.5"
+    fill="none"
+    stroke="url(#gold)"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <!-- ── DOT GRID — bottom right tech detail ── -->
+  <circle cx="22.5" cy="20" r="0.9" fill="#e8c97a" opacity="0.55"/>
+  <circle cx="25.5" cy="20" r="0.9" fill="#e8c97a" opacity="0.35"/>
+  <circle cx="22.5" cy="23" r="0.9" fill="#e8c97a" opacity="0.3"/>
+  <circle cx="25.5" cy="23" r="0.9" fill="#e8c97a" opacity="0.18"/>
+
+  <!-- ── HORIZONTAL LINE — top decoration ── -->
+  <line x1="20" y1="10" x2="27" y2="10" stroke="#e8c97a" stroke-width="0.7" stroke-linecap="round" opacity="0.3"/>
+  <line x1="20" y1="12" x2="25" y2="12" stroke="#e8c97a" stroke-width="0.5" stroke-linecap="round" opacity="0.18"/>
+</svg>

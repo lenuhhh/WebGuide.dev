@@ -480,45 +480,45 @@
             <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
           </div>
           <pre><span class="tok-sel">.header</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#ffffff</span>;
-  <span class="tok-prop">border-bottom</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#ffffff</span>;  <span class="tok-cmnt">/* 🎨 білий фон */</span>
+  <span class="tok-prop">border-bottom</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;  <span class="tok-cmnt">/* — тонка нижня лінія-розділювач */</span>
   <span class="tok-prop">padding</span>: <span class="tok-num">12px</span> <span class="tok-num">0</span>;
-  <span class="tok-prop">position</span>: <span class="tok-val">sticky</span>;
-  <span class="tok-prop">top</span>: <span class="tok-num">0</span>;
-  <span class="tok-prop">z-index</span>: <span class="tok-num">100</span>;
+  <span class="tok-prop">position</span>: <span class="tok-val">sticky</span>;  <span class="tok-cmnt">/* 📌 прилипає до верху при прокрутці (sticky header) */</span>
+  <span class="tok-prop">top</span>: <span class="tok-num">0</span>;  <span class="tok-cmnt">/* ↑ позиція зверху — 0px від верху */</span>
+  <span class="tok-prop">z-index</span>: <span class="tok-num">100</span>;  <span class="tok-cmnt">/* 🔼 шар 100 — перекриває елементи нижчого шару */</span>
 }
 
 <span class="tok-sel">.nav</span> {
-  <span class="tok-prop">max-width</span>: <span class="tok-num">1200px</span>;
-  <span class="tok-prop">margin</span>: <span class="tok-num">0</span> auto;
+  <span class="tok-prop">max-width</span>: <span class="tok-num">1200px</span>;  <span class="tok-cmnt">/* 📏 обмеження ширини — сайт не розтягується ширше 1200px */</span>
+  <span class="tok-prop">margin</span>: <span class="tok-num">0</span> auto;  <span class="tok-cmnt">/* ⇔ центрує блок: авто-відступи зліва і справа */</span>
   <span class="tok-prop">padding</span>: <span class="tok-num">0</span> <span class="tok-num">20px</span>;
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">justify-content</span>: <span class="tok-val">space-between</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">justify-content</span>: <span class="tok-val">space-between</span>;  <span class="tok-cmnt">/* ↔ крайні елементи у країв, решта — рівномірно */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }
 
 <span class="tok-sel">.nav-links</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами Flex/Grid — 30px */</span>
 }
 
 <span class="tok-sel">.nav-links a</span> {
-  <span class="tok-prop">text-decoration</span>: <span class="tok-val">none</span>;
-  <span class="tok-prop">color</span>: <span class="tok-str">#6b7280</span>;
-  <span class="tok-prop">font-size</span>: <span class="tok-num">14px</span>;
-  <span class="tok-prop">transition</span>: color <span class="tok-num">0.3s</span>;
+  <span class="tok-prop">text-decoration</span>: <span class="tok-val">none</span>;  <span class="tok-cmnt">/* 🚫 прибирає підкреслення у посилань */</span>
+  <span class="tok-prop">color</span>: <span class="tok-str">#6b7280</span>;  <span class="tok-cmnt">/* ✏️ сірий — другорядний текст, підписи */</span>
+  <span class="tok-prop">font-size</span>: <span class="tok-num">14px</span>;  <span class="tok-cmnt">/* 🔤 стандартний розмір шрифту UI-елементів */</span>
+  <span class="tok-prop">transition</span>: color <span class="tok-num">0.3s</span>;  <span class="tok-cmnt">/* ⏱ плавна зміна кольору при hover за 0.3 сек */</span>
 }
 <span class="tok-sel">.nav-links a:hover</span> { <span class="tok-prop">color</span>: <span class="tok-str">#3b82f6</span>; }
 
 <span class="tok-sel">.btn-login</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-val">transparent</span>;
-  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#d1d5db</span>;
-  <span class="tok-prop">color</span>: <span class="tok-str">#374151</span>;
-  <span class="tok-prop">padding</span>: <span class="tok-num">8px</span> <span class="tok-num">16px</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">6px</span>;
-  <span class="tok-prop">cursor</span>: <span class="tok-val">pointer</span>;
-  <span class="tok-prop">font-size</span>: <span class="tok-num">14px</span>;
-  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-val">transparent</span>;  <span class="tok-cmnt">/* 🎨 прозорий фон — видно фон батьківського елемента */</span>
+  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#d1d5db</span>;  <span class="tok-cmnt">/* ▭ тонка сіра рамка кнопки */</span>
+  <span class="tok-prop">color</span>: <span class="tok-str">#374151</span>;  <span class="tok-cmnt">/* ✏️ темно-сірий — колір тексту кнопки */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">8px</span> <span class="tok-num">16px</span>;  <span class="tok-cmnt">/* 📦 компактний відступ для кнопки/бейджу */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">6px</span>;  <span class="tok-cmnt">/* 🔘 легке заокруглення кутів (6px) */</span>
+  <span class="tok-prop">cursor</span>: <span class="tok-val">pointer</span>;  <span class="tok-cmnt">/* 👆 курсор-рука при наведенні — показує клікабельність */</span>
+  <span class="tok-prop">font-size</span>: <span class="tok-num">14px</span>;  <span class="tok-cmnt">/* 🔤 стандартний розмір шрифту UI-елементів */</span>
+  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;  <span class="tok-cmnt">/* ⏱ плавна анімація всіх змін за 0.3 сек */</span>
 }
 <span class="tok-sel">.btn-login:hover</span> { <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>; }</pre>
         </div>
@@ -582,32 +582,32 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.hero</span> {
-  <span class="tok-prop">max-width</span>: <span class="tok-num">1200px</span>;
-  <span class="tok-prop">margin</span>: <span class="tok-num">0</span> auto;
-  <span class="tok-prop">padding</span>: <span class="tok-num">80px</span> <span class="tok-num">20px</span>;
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span> <span class="tok-num">1fr</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">max-width</span>: <span class="tok-num">1200px</span>;  <span class="tok-cmnt">/* 📏 обмеження ширини — сайт не розтягується ширше 1200px */</span>
+  <span class="tok-prop">margin</span>: <span class="tok-num">0</span> auto;  <span class="tok-cmnt">/* ⇔ центрує блок: авто-відступи зліва і справа */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">80px</span> <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* 📦 відступ: 80px зверху/знизу, 20px ліво/право */</span>
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span> <span class="tok-num">1fr</span>;  <span class="tok-cmnt">/* ▥ дві рівні колонки (кожна 50%) */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;  <span class="tok-cmnt">/* ↔ великий проміжок між колонками — 60px */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }
 
 <span class="tok-sel">.hero-title</span> {
-  <span class="tok-prop">font-size</span>: <span class="tok-num">48px</span>;
-  <span class="tok-prop">font-weight</span>: <span class="tok-num">700</span>;
-  <span class="tok-prop">color</span>: <span class="tok-str">#1f2937</span>;
-  <span class="tok-prop">line-height</span>: <span class="tok-num">1.2</span>;
+  <span class="tok-prop">font-size</span>: <span class="tok-num">48px</span>;  <span class="tok-cmnt">/* 🔤 великий H1 заголовок hero-секції */</span>
+  <span class="tok-prop">font-weight</span>: <span class="tok-num">700</span>;  <span class="tok-cmnt">/* **B** жирний шрифт (bold) — заголовки */</span>
+  <span class="tok-prop">color</span>: <span class="tok-str">#1f2937</span>;  <span class="tok-cmnt">/* ✏️ темно-сірий — основний колір заголовків */</span>
+  <span class="tok-prop">line-height</span>: <span class="tok-num">1.2</span>;  <span class="tok-cmnt">/* ↕ щільний міжрядковий інтервал (для заголовків) */</span>
 }
 
 <span class="tok-sel">.btn-primary</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#3b82f6</span>;
-  <span class="tok-prop">color</span>: white;
-  <span class="tok-prop">padding</span>: <span class="tok-num">12px</span> <span class="tok-num">32px</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">8px</span>;
-  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#3b82f6</span>;  <span class="tok-cmnt">/* ✏️ синій акцент — посилання, кнопки */</span>
+  <span class="tok-prop">color</span>: white;  <span class="tok-cmnt">/* ✏️ білий колір тексту */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">12px</span> <span class="tok-num">32px</span>;  <span class="tok-cmnt">/* 📦 відступ кнопки: 12px вертик., 32px горизонт. */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">8px</span>;  <span class="tok-cmnt">/* 🔘 помірне заокруглення кутів (8px) */</span>
+  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;  <span class="tok-cmnt">/* ⏱ плавна анімація всіх змін за 0.3 сек */</span>
 }
 <span class="tok-sel">.btn-primary:hover</span> {
-  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-2px)</span>;
-  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">20px</span> rgba(<span class="tok-num">59</span>,<span class="tok-num">130</span>,<span class="tok-num">246</span>,<span class="tok-num">0.2</span>);
+  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-2px)</span>;  <span class="tok-cmnt">/* ↑ легке піднімання кнопки на 2px при hover */</span>
+  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">20px</span> rgba(<span class="tok-num">59</span>,<span class="tok-num">130</span>,<span class="tok-num">246</span>,<span class="tok-num">0.2</span>);  <span class="tok-cmnt">/* 💫 синя тінь кнопки при hover */</span>
 }</pre>
       </div>
 
@@ -651,22 +651,22 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.features-grid</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);
-  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);  <span class="tok-cmnt">/* ▦ три рівні колонки (33.3% кожна) */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами Flex/Grid — 30px */</span>
 }
 
 <span class="tok-sel">.feature-card</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#f9fafb</span>;
-  <span class="tok-prop">padding</span>: <span class="tok-num">40px</span> <span class="tok-num">30px</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;
-  <span class="tok-prop">text-align</span>: <span class="tok-val">center</span>;
-  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;
-  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#f9fafb</span>;  <span class="tok-cmnt">/* 🎨 майже білий (дуже світло-сірий) фон */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">40px</span> <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* 📦 внутрішній відступ картки */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;  <span class="tok-cmnt">/* 🔘 виражене заокруглення — стиль "картки" */</span>
+  <span class="tok-prop">text-align</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇔ вирівнювання тексту по центру */</span>
+  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;  <span class="tok-cmnt">/* ⏱ плавна анімація всіх змін за 0.3 сек */</span>
+  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;  <span class="tok-cmnt">/* ▭ тонка рамка навколо елемента */</span>
 }
 <span class="tok-sel">.feature-card:hover</span> {
-  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">25px</span> rgba(<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0.1</span>);
-  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-5px)</span>;
+  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">25px</span> rgba(<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0.1</span>);  <span class="tok-cmnt">/* 💫 тінь знизу — відчуття глибини картки */</span>
+  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-5px)</span>;  <span class="tok-cmnt">/* ↑ підіймає картку на 5px вгору (ефект hover) */</span>
 }</pre>
       </div>
 
@@ -721,19 +721,19 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.content-grid</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span> <span class="tok-num">1fr</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span> <span class="tok-num">1fr</span>;  <span class="tok-cmnt">/* ▥ дві рівні колонки (кожна 50%) */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;  <span class="tok-cmnt">/* ↔ великий проміжок між колонками — 60px */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }
 
 <span class="tok-sel">.content-item</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">20px</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами — 20px */</span>
 }
 
 <span class="tok-sel">.item-icon</span> {
-  <span class="tok-prop">font-size</span>: <span class="tok-num">40px</span>;
+  <span class="tok-prop">font-size</span>: <span class="tok-num">40px</span>;  <span class="tok-cmnt">/* 🔤 великий розмір іконки-емодзі */</span>
   <span class="tok-prop">flex-shrink</span>: <span class="tok-num">0</span>; <span class="tok-cmnt">/* не стискується */</span>
 }</pre>
       </div>
@@ -786,21 +786,21 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.two-column-grid</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">2</span>, <span class="tok-num">1fr</span>);
-  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">2</span>, <span class="tok-num">1fr</span>);  <span class="tok-cmnt">/* ▥ дві рівні колонки через функцію repeat() */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">60px</span>;  <span class="tok-cmnt">/* ↔ великий проміжок між колонками — 60px */</span>
 }
 
 <span class="tok-sel">.two-column-item</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами Flex/Grid — 30px */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }
 
 <span class="tok-sel">.item-image</span> {
-  <span class="tok-prop">height</span>: <span class="tok-num">300px</span>;
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;
+  <span class="tok-prop">height</span>: <span class="tok-num">300px</span>;  <span class="tok-cmnt">/* 📐 фіксована висота блоку 300px */</span>
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;  <span class="tok-cmnt">/* 🎨 світло-сірий фон секції/блоку */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;  <span class="tok-cmnt">/* 🔘 виражене заокруглення — стиль "картки" */</span>
   <span class="tok-prop">flex</span>: <span class="tok-num">0</span> <span class="tok-num">0</span> <span class="tok-num">300px</span>;
 }</pre>
       </div>
@@ -843,29 +843,29 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.cards-grid</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);
-  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);  <span class="tok-cmnt">/* ▦ три рівні колонки (33.3% кожна) */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами Flex/Grid — 30px */</span>
 }
 
 <span class="tok-sel">.info-card</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#ffffff</span>;
-  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;
-  <span class="tok-prop">overflow</span>: <span class="tok-val">hidden</span>;
-  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#ffffff</span>;  <span class="tok-cmnt">/* 🎨 білий фон */</span>
+  <span class="tok-prop">border</span>: <span class="tok-num">1px</span> solid <span class="tok-str">#e5e7eb</span>;  <span class="tok-cmnt">/* ▭ тонка рамка навколо елемента */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;  <span class="tok-cmnt">/* 🔘 виражене заокруглення — стиль "картки" */</span>
+  <span class="tok-prop">overflow</span>: <span class="tok-val">hidden</span>;  <span class="tok-cmnt">/* ✂️ обрізає контент що виходить за межі блоку */</span>
+  <span class="tok-prop">transition</span>: all <span class="tok-num">0.3s</span>;  <span class="tok-cmnt">/* ⏱ плавна анімація всіх змін за 0.3 сек */</span>
 }
 <span class="tok-sel">.info-card:hover</span> {
-  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">25px</span> rgba(<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0.1</span>);
-  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-5px)</span>;
+  <span class="tok-prop">box-shadow</span>: <span class="tok-num">0</span> <span class="tok-num">10px</span> <span class="tok-num">25px</span> rgba(<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0</span>,<span class="tok-num">0.1</span>);  <span class="tok-cmnt">/* 💫 тінь знизу — відчуття глибини картки */</span>
+  <span class="tok-prop">transform</span>: <span class="tok-val">translateY(-5px)</span>;  <span class="tok-cmnt">/* ↑ підіймає картку на 5px вгору (ефект hover) */</span>
 }
 
 <span class="tok-sel">.card-image</span> {
-  <span class="tok-prop">height</span>: <span class="tok-num">250px</span>;
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">justify-content</span>: <span class="tok-val">center</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">height</span>: <span class="tok-num">250px</span>;  <span class="tok-cmnt">/* 📐 фіксована висота блоку зображення 250px */</span>
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;  <span class="tok-cmnt">/* 🎨 світло-сірий фон секції/блоку */</span>
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">justify-content</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇔ всі елементи по центру головної осі */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }</pre>
       </div>
 
@@ -928,14 +928,14 @@
 
 <span class="tok-cmnt">/* CSS */</span>
 <span class="tok-sel">.cta-section</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;
-  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;
-  <span class="tok-prop">text-align</span>: <span class="tok-val">center</span>;
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">flex-direction</span>: <span class="tok-val">column</span>;
-  <span class="tok-prop">gap</span>: <span class="tok-num">24px</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
-  <span class="tok-prop">padding</span>: <span class="tok-num">60px</span> <span class="tok-num">20px</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#f3f4f6</span>;  <span class="tok-cmnt">/* 🎨 світло-сірий фон секції/блоку */</span>
+  <span class="tok-prop">border-radius</span>: <span class="tok-num">12px</span>;  <span class="tok-cmnt">/* 🔘 виражене заокруглення — стиль "картки" */</span>
+  <span class="tok-prop">text-align</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇔ вирівнювання тексту по центру */</span>
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">flex-direction</span>: <span class="tok-val">column</span>;  <span class="tok-cmnt">/* ↕ головна вісь вертикальна (зверху вниз) */</span>
+  <span class="tok-prop">gap</span>: <span class="tok-num">24px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами — 24px */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">60px</span> <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* 📦 відступ: 60px зверху/знизу, 20px ліво/право */</span>
 }</pre>
       </div>
 
@@ -977,29 +977,29 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.faq-question</span> {
-  <span class="tok-prop">padding</span>: <span class="tok-num">20px</span>;
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
-  <span class="tok-prop">justify-content</span>: <span class="tok-val">space-between</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
-  <span class="tok-prop">cursor</span>: <span class="tok-val">pointer</span>;
+  <span class="tok-prop">padding</span>: <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* 📦 однаковий відступ з усіх 4 сторін */</span>
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
+  <span class="tok-prop">justify-content</span>: <span class="tok-val">space-between</span>;  <span class="tok-cmnt">/* ↔ крайні елементи у країв, решта — рівномірно */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
+  <span class="tok-prop">cursor</span>: <span class="tok-val">pointer</span>;  <span class="tok-cmnt">/* 👆 курсор-рука при наведенні — показує клікабельність */</span>
 }
 
 <span class="tok-sel">.faq-toggle</span> {
   <span class="tok-prop">font-size</span>: <span class="tok-num">24px</span>;
-  <span class="tok-prop">color</span>: <span class="tok-str">#3b82f6</span>;
+  <span class="tok-prop">color</span>: <span class="tok-str">#3b82f6</span>;  <span class="tok-cmnt">/* ✏️ синій акцент — посилання, кнопки */</span>
   <span class="tok-prop">transition</span>: transform <span class="tok-num">0.3s</span>;
 }
 
 <span class="tok-sel">.faq-answer</span> {
   <span class="tok-prop">display</span>: <span class="tok-val">none</span>; <span class="tok-cmnt">/* прихована за замовчуванням */</span>
-  <span class="tok-prop">padding</span>: <span class="tok-num">20px</span>;
+  <span class="tok-prop">padding</span>: <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* 📦 однаковий відступ з усіх 4 сторін */</span>
 }
 
 <span class="tok-sel">.faq-item.active .faq-answer</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">block</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">block</span>;  <span class="tok-cmnt">/* ▭ блочний режим — займає всю ширину рядка */</span>
 }
 <span class="tok-sel">.faq-item.active .faq-toggle</span> {
-  <span class="tok-prop">transform</span>: <span class="tok-val">rotate(45deg)</span>;
+  <span class="tok-prop">transform</span>: <span class="tok-val">rotate(45deg)</span>;  <span class="tok-cmnt">/* ↻ поворот на 45° (+ стає ×) */</span>
 }</pre>
       </div>
 
@@ -1052,15 +1052,15 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.footer</span> {
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#1f2937</span>;
-  <span class="tok-prop">color</span>: <span class="tok-str">#e5e7eb</span>;
-  <span class="tok-prop">padding</span>: <span class="tok-num">60px</span> <span class="tok-num">20px</span> <span class="tok-num">20px</span>;
-  <span class="tok-prop">margin-top</span>: <span class="tok-num">80px</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#1f2937</span>;  <span class="tok-cmnt">/* 🎨 темно-сірий/сланцевий фон footer */</span>
+  <span class="tok-prop">color</span>: <span class="tok-str">#e5e7eb</span>;  <span class="tok-cmnt">/* ✏️ світло-сірий — текст на темному фоні */</span>
+  <span class="tok-prop">padding</span>: <span class="tok-num">60px</span> <span class="tok-num">20px</span> <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* 📦 відступ: 60px зверху/знизу, 20px ліво/право */</span>
+  <span class="tok-prop">margin-top</span>: <span class="tok-num">80px</span>;  <span class="tok-cmnt">/* ↕ зовнішній відступ зверху — відокремлює footer */</span>
 }
 
 <span class="tok-sel">.footer-content</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
-  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
+  <span class="tok-prop">grid-template-columns</span>: repeat(<span class="tok-num">3</span>, <span class="tok-num">1fr</span>);  <span class="tok-cmnt">/* ▦ три рівні колонки (33.3% кожна) */</span>
   <span class="tok-prop">gap</span>: <span class="tok-num">40px</span>;
 }</pre>
       </div>
@@ -1174,9 +1174,9 @@
 
 <span class="tok-sel">body</span> {
   <span class="tok-prop">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="tok-str">'Segoe UI'</span>, Roboto, sans-serif;
-  <span class="tok-prop">background-color</span>: <span class="tok-str">#f9fafb</span>;
+  <span class="tok-prop">background-color</span>: <span class="tok-str">#f9fafb</span>;  <span class="tok-cmnt">/* 🎨 майже білий (дуже світло-сірий) фон */</span>
   <span class="tok-prop">color</span>: <span class="tok-str">#333</span>;
-  <span class="tok-prop">line-height</span>: <span class="tok-num">1.6</span>;
+  <span class="tok-prop">line-height</span>: <span class="tok-num">1.6</span>;  <span class="tok-cmnt">/* ↕ комфортний інтервал між рядками тексту */</span>
 }
 
 <span class="tok-cmnt">/* === @MEDIA — АДАПТИВНИЙ ДИЗАЙН === */</span>
@@ -1197,7 +1197,7 @@
   <span class="tok-sel">.content-grid</span>,
   <span class="tok-sel">.two-column-grid</span> {
     <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span>;
-    <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;
+    <span class="tok-prop">gap</span>: <span class="tok-num">30px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами Flex/Grid — 30px */</span>
   }
 
   <span class="tok-sel">.footer-content</span> {
@@ -1865,7 +1865,7 @@
         </div>
         <pre><span class="tok-cmnt">/* === КОНТЕЙНЕР === */</span>
 <span class="tok-sel">.container</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;  <span class="tok-cmnt">/* 📐 вмикає Flexbox — дочірні елементи шикуються в ряд */</span>
 
   <span class="tok-cmnt">/* Напрямок */</span>
   <span class="tok-prop">flex-direction</span>: <span class="tok-val">row</span>;        <span class="tok-cmnt">/* ліворуч → праворуч (за замовч.) */</span>
@@ -1902,7 +1902,7 @@
           <button class="code-copy" onclick="copyCode(this)">Копіювати</button>
         </div>
         <pre><span class="tok-sel">.grid</span> {
-  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;
+  <span class="tok-prop">display</span>: <span class="tok-val">grid</span>;  <span class="tok-cmnt">/* 🔲 вмикає CSS Grid — двовимірна сітка рядків і стовпців */</span>
 
   <span class="tok-cmnt">/* Кількість та розмір колон */</span>
   <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">1fr</span> <span class="tok-num">1fr</span> <span class="tok-num">1fr</span>;                        <span class="tok-cmnt">/* 3 рівні */</span>
@@ -1910,8 +1910,8 @@
   <span class="tok-prop">grid-template-columns</span>: <span class="tok-num">200px</span> <span class="tok-num">1fr</span>;                          <span class="tok-cmnt">/* фіксована + гнучка */</span>
   <span class="tok-prop">grid-template-columns</span>: repeat(auto-fit, minmax(<span class="tok-num">250px</span>, <span class="tok-num">1fr</span>)); <span class="tok-cmnt">/* адаптивна */</span>
 
-  <span class="tok-prop">gap</span>: <span class="tok-num">20px</span>;
-  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">gap</span>: <span class="tok-num">20px</span>;  <span class="tok-cmnt">/* ↔ проміжок між елементами — 20px */</span>
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;  <span class="tok-cmnt">/* ⇕ центрування по поперечній осі */</span>
 }
 
 <span class="tok-cmnt">/* Елемент займає кілька клітинок */</span>
@@ -4265,5 +4265,162 @@ window.setLang = function(lang) {
 
 })(); // end IIFE
 </script>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  АНОТАЦІЇ ДЛЯ НАВЧАННЯ — WebGuide.dev Annotated Edition
+// ═══════════════════════════════════════════════════════
+
+const ANNOTATIONS = {
+  "css-header": {
+    title: "📖 Що робить CSS-структура — Header / Навігація",
+    items: [
+      { sel: ".header", role: "БАТЬКО", desc: "<code>position: sticky</code> + <code>top: 0</code> — шапка «прилипає» до верху при прокрутці. <code>z-index: 100</code> — перекриває всі інші блоки (відображається поверх них). <code>border-bottom</code> — тонка лінія знизу для візуального відокремлення." },
+      { sel: ".nav", role: "ДОЧІРНІЙ", desc: "<code>max-width: 1200px</code> + <code>margin: 0 auto</code> — обмежує ширину і центрує контент. <code>display: flex</code> + <code>justify-content: space-between</code> — логотип, посилання і кнопка розставляються по краях рядка. <code>align-items: center</code> — вирівнює по вертикалі." },
+      { sel: ".nav-links", role: "ДОЧІРНІЙ → ДОЧІРНІЙ", desc: "<code>display: flex</code> + <code>gap: 30px</code> — посилання стають у горизонтальний рядок з рівними проміжками 30px між ними." },
+      { sel: ".nav-links a", role: "ЕЛЕМЕНТИ", desc: "<code>text-decoration: none</code> — прибирає підкреслення. <code>color: #6b7280</code> — сірий колір за замовч. <code>transition: color 0.3s</code> — плавна зміна кольору. При <code>:hover</code> колір стає синім." },
+      { sel: ".btn-login", role: "ЕЛЕМЕНТ", desc: "<code>background-color: transparent</code> + <code>border</code> = кнопка-контур без заливки. <code>cursor: pointer</code> — курсор-рука. При <code>:hover</code> — легкий сірий фон." }
+    ]
+  },
+  "block-hero": {
+    title: "📖 Що робить CSS-структура — Hero секція",
+    items: [
+      { sel: ".hero", role: "БАТЬКО", desc: "<code>display: grid</code> + <code>grid-template-columns: 1fr 1fr</code> — ділить секцію на 2 рівні колонки. <code>gap: 60px</code> — великий проміжок між ними. <code>align-items: center</code> — обидві колонки вирівняні по центру вертикально. <code>max-width</code> + <code>margin: 0 auto</code> + <code>padding</code> — центрування і внутрішні відступи." },
+      { sel: ".hero-title", role: "ДОЧІРНІЙ", desc: "<code>font-size: 48px</code> — великий заголовок H1. <code>font-weight: 700</code> — жирний. <code>line-height: 1.2</code> — щільний міжрядковий інтервал (рядки заголовку ближче один до одного)." },
+      { sel: ".btn-primary", role: "ДОЧІРНІЙ", desc: "<code>background-color: #3b82f6</code> — синій фон. <code>padding: 12px 32px</code> — великий горизонт. відступ. <code>border-radius: 8px</code> — заокруглені кути. При <code>:hover</code>: <code>translateY(-2px)</code> піднімає кнопку + тінь = ефект «підйому»." }
+    ]
+  },
+  "block-features": {
+    title: "📖 Що робить CSS-структура — Features (картки)",
+    items: [
+      { sel: ".features-grid", role: "БАТЬКО", desc: "<code>display: grid</code> + <code>repeat(3, 1fr)</code> — 3 рівні колонки автоматично. <code>gap: 30px</code> — проміжок між картками. Цей батько визначає скільки карток і як вони розташовані — самі картки нічого не знають про кількість сусідів." },
+      { sel: ".feature-card", role: "ДОЧІРНІЙ", desc: "<code>background-color: #f9fafb</code> + <code>border</code> — легкий фон і контур. <code>border-radius: 12px</code> — стиль «картки». <code>text-align: center</code> — весь вміст по центру. <code>transition: all 0.3s</code> — всі hover-ефекти анімовані." },
+      { sel: ".feature-card:hover", role: "ПСЕВДО-КЛАС", desc: "<code>box-shadow</code> — тінь з'являється при наведенні. <code>translateY(-5px)</code> — картка піднімається на 5px. Разом — ефект «підйому» що дає 3D-відчуття." }
+    ]
+  },
+  "block-faq": {
+    title: "📖 Як разом працюють CSS + JS — FAQ Акордеон",
+    items: [
+      { sel: ".faq-answer", role: "ДЕФОЛТНИЙ СТАН (закрито)", desc: "<code>display: none</code> — відповідь прихована за замовчуванням. CSS не знає чи питання відкрите — це завдання JS." },
+      { sel: ".faq-item.active .faq-answer", role: "АКТИВНИЙ СТАН (відкрито)", desc: "Каскадний селектор: стиль застосовується ТІЛЬКИ якщо <code>.faq-answer</code> знаходиться всередині <code>.faq-item</code> що має клас <code>.active</code>. <code>display: block</code> — показує відповідь." },
+      { sel: ".faq-item.active .faq-toggle", role: "АНІМАЦІЯ ІКОНКИ", desc: "<code>rotate(45deg)</code> — іконка + обертається на 45° і стає ×. <code>transition: transform 0.3s</code> — поворот анімований." },
+      { sel: "JavaScript", role: "ЛОГІКА ПЕРЕМИКАННЯ", desc: "<code>querySelectorAll('.faq-question')</code> → <code>addEventListener('click')</code> → <code>.closest('.faq-item')</code> (іде вгору по DOM до батька) → <code>classList.toggle('active')</code> (додає/видаляє клас). CSS сам реагує на наявність/відсутність класу." }
+    ]
+  },
+  "css-reset": {
+    title: "📖 Що робить CSS Reset + @media",
+    items: [
+      { sel: "* { margin:0; padding:0 }", role: "СКИДАННЯ БРАУЗЕРА", desc: "Всі браузери мають свої дефолтні відступи (Chrome: <code>body {margin:8px}</code>, <code>h1 {margin:.67em 0}</code> тощо). Зірочка <code>*</code> застосовується до кожного елемента і обнуляє ці відступи щоб сайт виглядав однаково у всіх браузерах." },
+      { sel: "box-sizing: border-box", role: "МОДЕЛЬ РОЗМІРІВ", desc: "Без цього: <code>width: 300px + padding: 20px = 340px</code> реальна ширина. З цим: <code>width: 300px</code> завжди буде 300px, padding враховується всередині. Це запобігає сюрпризам з розмірами." },
+      { sel: "@media (max-width: 768px)", role: "АДАПТИВ", desc: "Все всередині цього блоку застосовується ТІЛЬКИ на екранах ≤ 768px. Grid-сітки стають одноколонковими, заголовки зменшуються — сайт адаптується до мобільних. Це і є responsive web design." }
+    ]
+  },
+  "block-footer": {
+    title: "📖 Що робить CSS-структура — Footer",
+    items: [
+      { sel: ".footer", role: "БАТЬКО", desc: "<code>background-color: #1f2937</code> — темний фон контрастує з тілом сторінки. <code>color: #e5e7eb</code> — світлий текст на темному фоні. <code>padding: 60px 20px 20px</code> — великий верхній відступ, менший нижній. <code>margin-top: 80px</code> — відокремлює від основного контенту." },
+      { sel: ".footer-content", role: "ДОЧІРНІЙ", desc: "<code>display: grid</code> + <code>grid-template-columns: repeat(3, 1fr)</code> — три рівні колонки. <code>gap: 40px</code> — рівні проміжки. На мобільному <code>@media</code> перетворює на 1 колонку." }
+    ]
+  }
+};
+
+// Inject annotation boxes after relevant sections
+document.addEventListener('DOMContentLoaded', () => {
+  Object.entries(ANNOTATIONS).forEach(([sectionId, data]) => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    
+    // Build HTML
+    const box = document.createElement('div');
+    box.className = 'learn-annotation';
+    box.innerHTML = `
+      <div class="learn-anno-header">
+        <span class="learn-anno-icon">💡</span>
+        <span class="learn-anno-title">${data.title}</span>
+      </div>
+      <div class="learn-anno-body">
+        ${data.items.map(item => `
+          <div class="learn-anno-item">
+            <div class="learn-anno-selector">
+              <code class="learn-anno-code">${item.sel}</code>
+              <span class="learn-anno-role">${item.role}</span>
+            </div>
+            <div class="learn-anno-desc">${item.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    
+    // Find the last code-block or preview-label in the section
+    const previewLabel = section.querySelector('.preview-label');
+    if (previewLabel) {
+      section.insertBefore(box, previewLabel);
+    } else {
+      section.appendChild(box);
+    }
+  });
+});
+</script>
+
+<style>
+/* ══ ANNOTATION STYLES ══════════════════════════════════ */
+.learn-annotation {
+  margin: 28px 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e8f5e9 100%);
+  border: 1.5px solid #a5d6a7;
+  border-left: 4px solid #2d7a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(45,122,58,.08);
+}
+.learn-anno-header {
+  background: linear-gradient(90deg, #2d7a3a, #1a7a6e);
+  padding: 12px 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.learn-anno-icon { font-size: 18px; }
+.learn-anno-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px; font-weight: 700;
+  color: #fff; letter-spacing: 0.01em;
+}
+.learn-anno-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; }
+.learn-anno-item {
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid rgba(45,122,58,.15);
+}
+.learn-anno-selector {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 7px; flex-wrap: wrap;
+}
+.learn-anno-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: #1a2e1a;
+  color: #a5d6a7;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.learn-anno-role {
+  font-size: 10px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: #1a7a6e;
+  background: rgba(26,122,110,.1);
+  padding: 2px 7px; border-radius: 4px;
+}
+.learn-anno-desc {
+  font-size: 13px; line-height: 1.6; color: #1a2e1a;
+  font-family: 'DM Sans', sans-serif;
+}
+.learn-anno-desc code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  background: rgba(26,46,26,.08);
+  color: #1a7a6e;
+  padding: 1px 5px; border-radius: 3px;
+}
+</style>
+
 </body>
 </html>
